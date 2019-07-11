@@ -7,7 +7,6 @@ import com.crowdar.api.rest.Response;
 import com.crowdar.api.rest.RestClient;
 import com.crowdar.core.JsonUtils;
 import com.crowdar.core.PageSteps;
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -19,7 +18,7 @@ import java.io.File;
 import java.net.URISyntaxException;
 
 import static api.Model.PageBase.BASE_URL;
-import static api.Model.PageBase.getLastResponse;
+
 
 public class CommonSteps extends PageSteps {
 
