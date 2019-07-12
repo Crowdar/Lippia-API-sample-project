@@ -22,33 +22,13 @@ import static api.Model.PageBase.BASE_URL;
 
 public class CommonSteps extends PageSteps {
 
-    public RestClient rest;
-
-    public CommonSteps() {
-        rest = new RestClient();
-    }
-
-
-    public void setLastResponse(Response response) {
-        PageBase.setLastResponse(response);
-    }
-
-    public Request getRequest(String jsonFileName) {
-        String jsonRequest = JsonUtils.getJSONFromFile("requests" + File.separator + jsonFileName);
-        return JsonUtils.deserialize(jsonRequest, Request.class).iterator().next();
-    }
     @Given("^As an api user for example endpoint$")
     public void asAnApiUserForExampleEndpoint()  {
     }
 
     @When("^I perform a GET to users endpoint with the id '(.*)'$")
-    public void iPerformAGETToUsersEndpointWithTheIdId(String id) throws URISyntaxException {
-        Request req = getRequest("");
-        URIBuilder ub = new URIBuilder(BASE_URL);
-        ub.addParameter("q", id);
-       Response resp = rest.get(ub.toString(), User.class, "", req.getUrlParameters(),req.getHeaders().toString());
-       setLastResponse(resp);
-    }
+    public void iPerformAGETToUsersEndpointWithTheIdId(String id) throws URISyntaxException {}
+
 
     @Then("^I will get the proper status code '(.*)'$")
     public void iWillGetTheProperStatusCodeStatusCode(String expStatusCode) {
