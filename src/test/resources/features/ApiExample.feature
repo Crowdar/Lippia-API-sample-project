@@ -4,10 +4,10 @@ Feature: Api example
   @Example
   Scenario Outline: Example scenario for get user data
     Given As an api user for example endpoint
-    When I perform a GET to users endpoint with the id '<id>'
+    When I perform a 'GET' to 'USER' endpoint with the '<id>'
     Then I will get the proper status code '<statusCode>'
-    And The proper '<id>' returned in the response
+    And The proper 'Id' '<id>' returned in the response
 
     Examples:
-    |id |statusCode|
+    |id |statusCode| 
     | 2 |200       |
