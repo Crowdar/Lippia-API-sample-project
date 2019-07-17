@@ -1,7 +1,9 @@
 package services;
 
+import api.Model.Data;
 import api.Model.PageBase;
 import api.Model.User;
+import api.Model.UserCreated;
 import com.crowdar.api.rest.Request;
 import com.crowdar.api.rest.Response;
 import com.crowdar.api.rest.RestClient;
@@ -15,10 +17,18 @@ public class UserService extends PageBase {
         return JsonUtils.deserialize(jsonRequest, Request.class);
     }
 
-    public static Response get(String id) throws URISyntaxException {
-        Request req = getRequest("exampleJson");
-        Response resp = new RestClient().get(BASE_URL, User.class, "", req.getUrlParameters(),req.getHeaders().toString());
+    public static Response get(String jsonName){
+        Request req = getRequest(jsonName);
+        Response resp = new RestClient().get(BASE_URL, Data.class, "", req.getUrlParameters(),req.getHeaders().toString());
         setLastResponse(resp);
         return resp;
+    }
+
+    public static Response post(String jsonName){
+        Request req = getRequest(jsonName);
+        Response resp = new RestClient().post(BASE_URL, UserCreated.class, req.getBody().toString(), req.getUrlParameters(),req.getHeaders().toString());
+        setLastResponse(resp);
+        return resp;
+
     }
 }

@@ -1,8 +1,8 @@
 package ar.steps;
 
 import java.lang.reflect.InvocationTargetException;
-import java.net.URISyntaxException;
 
+import api.Model.Data;
 import api.Model.User;
 import org.testng.Assert;
 
@@ -16,7 +16,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 
-public class CommonSteps extends PageSteps {
+public class UserSteps extends PageSteps {
 
     @Given("^As an api user for example endpoint$")
     public void asAnApiUserForExampleEndpoint()  {
@@ -36,7 +36,9 @@ public class CommonSteps extends PageSteps {
 
     @And("^The proper '(.*)' '(.*)' returned in the response$")
     public void theProperIdReturnedInTheResponse(String property, String value) {
-        User response = (User)PageBase.getLastResponse().getResponse();
-        Assert.assertEquals(response.getId(),value, "The " + property + " is not in the response");
+        if(!value.isEmpty()){
+            Data response = (Data)PageBase.getLastResponse().getResponse();
+            Assert.assertEquals(String.valueOf(response.getUser().getId()),value, "The " + property + " is not in the response");
+        }
     }
 }

@@ -4,10 +4,11 @@ Feature: Api example
   @Example
   Scenario Outline: Example scenario for get user data
     Given As an api user for example endpoint
-    When I perform a 'GET' to 'USER' endpoint with the '<id>'
+    When I perform a '<operation>' to '<entity>' endpoint with the '<jsonName>'
     Then I will get the proper status code '<statusCode>'
     And The proper 'Id' '<id>' returned in the response
 
     Examples:
-    |id |statusCode| 
-    | 2 |200       |
+    |jsonName     |statusCode| id| operation| entity    |
+    |exampleJson  |200       |2  | GET      | USER      |
+    |createUser   |201       |   | POST     | USER      |
