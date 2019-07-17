@@ -6,14 +6,13 @@ import com.crowdar.core.PropertyManager;
 public class PageBase {
 
     public static final String BASE_URL = PropertyManager.getProperty("base.api.url");
+    private static final ThreadLocal<Response> LAST_RESPONSE = new ThreadLocal<Response>();
 
-    private static Response LAST_RESPONSE;
-
-    public static void setLastResponse(Response httpResponse){
-        LAST_RESPONSE = httpResponse;
+    public static void setLastResponse(Response lastResponse) {
+        LAST_RESPONSE.set(lastResponse);
     }
 
-    public static Response getLastResponse(){
-        return LAST_RESPONSE;
+    public static Response getLastResponse() {
+        return LAST_RESPONSE.get();
     }
 }

@@ -3,6 +3,7 @@ package ar.steps;
 import java.lang.reflect.InvocationTargetException;
 import java.net.URISyntaxException;
 
+import api.Model.User;
 import org.testng.Assert;
 
 import com.crowdar.core.PageSteps;
@@ -22,7 +23,7 @@ public class CommonSteps extends PageSteps {
     }
 
     @When("^I perform a '(.*)' to '(.*)' endpoint with the '(.*)'$")
-    public void iPerformAGETToUsersEndpointWithTheIdId(String method, String entity, String value) throws URISyntaxException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException {
+    public void iPerformAGETToUsersEndpointWithTheIdId(String method, String entity, String value) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException {
     	System.out.println(method.toLowerCase());
     	EntityConfiguration.valueOf(entity).getEntityService().getMethod(method.toLowerCase(), String.class).invoke("", value);
     }
@@ -35,7 +36,7 @@ public class CommonSteps extends PageSteps {
 
     @And("^The proper '(.*)' '(.*)' returned in the response$")
     public void theProperIdReturnedInTheResponse(String property, String value) {
-        String response = PageBase.getLastResponse().getResponse().toString();
-        Assert.assertTrue(response.contains(value), "The " + property + " is not in the response");
+        User response = (User)PageBase.getLastResponse().getResponse();
+        Assert.assertEquals(response.getId(),value, "The " + property + " is not in the response");
     }
 }
