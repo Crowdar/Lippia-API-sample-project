@@ -20,14 +20,13 @@ public class UserSteps extends PageSteps {
 
     @When("^I perform a '(.*)' to '(.*)' endpoint with the '(.*)'$")
     public void iPerformAGETToUsersEndpointWithTheIdId(String method, String entity, String value) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException {
-        System.out.println(method.toLowerCase());
         EntityConfiguration.valueOf(entity).getEntityService().getMethod(method.toLowerCase(), String.class).invoke("", value);
     }
 
     @Then("^I will get the proper status code '(.*)'$")
     public void iWillGetTheProperStatusCodeStatusCode(String expStatusCode) {
-        int actualStatuscode = APIManager.getLastResponse().getStatusCode();
-        Assert.assertEquals(Integer.parseInt(expStatusCode), actualStatuscode, "The status code are no equal");
+        int actualStatusCode = APIManager.getLastResponse().getStatusCode();
+        Assert.assertEquals(Integer.parseInt(expStatusCode), actualStatusCode, "The status code are not equals");
     }
 
     @And("^The proper '(.*)' '(.*)' returned in the response$")
