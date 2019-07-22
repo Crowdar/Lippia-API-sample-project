@@ -4,7 +4,7 @@
 
 The following project has the purpose of demonstrate and let test automation developers to to test API requests using Lippia Automation Framework based on Rest Client library.
 
-![Lippia Architecture API] 
+![Lippia Architecture API](https://bitbucket.org/crowdarautomation/lippia-api-example-project/architectureApi.png)
 
 
 #Requirements :
