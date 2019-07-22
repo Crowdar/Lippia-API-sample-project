@@ -16,17 +16,7 @@ The following project has the purpose of demonstrate and let test automation dev
 + maven 3 
 	https://maven.apache.org/download.cgi
 
-Linux
-Running selenium grid container
-linux
-docker 18.09 
-https://docs.docker.com/install/linux/docker-ce/ubuntu/
-docker compose 1.24 
-https://docs.docker.com/compose/install/
-go to root folder project you will find a docker-compose.yml file
-run command : sudo docker-compose up --scale chrome=10 -d
-
 #Executing tests
-- Steps
+ Steps
    - Clone the project
    - Inside of project's folder run "mvn clean install"
