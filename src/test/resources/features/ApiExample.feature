@@ -9,6 +9,6 @@ Feature: Api example
     And The proper 'Id' '<id>' returned in the response
 
     Examples:
-    |jsonName     |statusCode| id| operation| entity    |
-    |exampleJson  |200       |2  | GET      | USER      |
-    |createUser   |201       |   | POST     | USER      |
+      | jsonName    | statusCode | id | operation | entity |
+      | exampleJson | 200        | 2  | GET       | USER   |
+      | createUser  | 201        |    | POST      | USER   |

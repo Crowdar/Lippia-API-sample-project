@@ -9,12 +9,12 @@ public class Hooks {
 
     @Before()
     public void setScenario(Scenario scenario) {
-        Logger.getRootLogger().info("-----------" + scenario.getName()+"-----------" );
+        Logger.getRootLogger().info("-----------" + scenario.getName() + "-----------");
     }
 
     @After()
     public void dismissAll(Scenario scenario) {
-        Logger.getRootLogger().info(" ending -----------" + scenario.getName()+"-----------" );
+        Logger.getRootLogger().info(" ending -----------" + scenario.getName() + "-----------");
 
     }
 }

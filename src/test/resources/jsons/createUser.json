@@ -1,8 +1,10 @@
 {
-  "headers": {"Content-Type": "application/json" },
+  "headers": {
+    "Content-Type": "application/json"
+  },
   "body": {
-       "name": "test",
-        "job": "leader"
-      }
+    "name": "test",
+    "job": "leader"
+  }
 }
 
