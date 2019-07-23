@@ -1,0 +1,10 @@
+{
+  "url": "https://postman-echo.com/status/500",
+  "headers": {
+    "Content-Type": "application/json"
+  },
+  "body": "",
+  "urlParameters": {
+  }
+}
+
