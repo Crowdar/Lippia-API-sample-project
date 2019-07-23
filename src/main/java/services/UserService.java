@@ -1,7 +1,7 @@
 package services;
 
-import api.Model.Data;
-import api.Model.UserCreated;
+import api.model.Data;
+import api.model.UserCreated;
 import com.crowdar.api.rest.MethodsService;
 import com.crowdar.api.rest.Response;
 

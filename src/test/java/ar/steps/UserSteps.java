@@ -1,6 +1,6 @@
 package ar.steps;
 
-import api.Model.Data;
+import api.model.Data;
 import api.config.EntityConfiguration;
 import com.crowdar.api.rest.APIManager;
 import com.crowdar.core.PageSteps;
