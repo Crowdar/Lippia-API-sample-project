@@ -79,6 +79,15 @@
 
     <repositories>
         <repository>
+            <id>atlassian-repo</id>
+            <url>https://maven.atlassian.com/content/repositories/atlassian-public/</url>
+        </repository>
+
+        <repository>
+            <id>atlassian-pack</id>
+            <url>https://packages.atlassian.com/maven-public/</url>
+        </repository>
+        <repository>
             <id>crowdarRepo</id>
             <name>crowdar-repository-s3</name>
             <url>http://nexus-v3-repositories.automation.crowdaronline.com/repository/maven-s3/</url>
