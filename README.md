@@ -80,22 +80,71 @@ In this example, *ApiExample* is the first endpoint the framework will interact 
 |ApiExample.feature| Feature file: Definition of the **Test Scenarios** with all the **steps** written in Cucumber format (http)|
 
 
-###Page Object
+###Model Object Example
 
-Descripcion de la clase page object
-
+In the model examples you can mapped the expected objects from different api responses. We can show you a little example:
 ```
-   public Inicio(SharedDriver driver){
-        super(driver);
-        this.url = "";
+{
+    "data": {
+        "id": 2,
+        "email": "janet.weaver@reqres.in",
+        "first_name": "Janet",
+        "last_name": "Weaver",
+        "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/josephstein/128.jpg"
     }
-
-    public void navegarAlInicio(){
-        navigateToIt();
-    }
+}
 ```
-	
-	
+So the model class will be something like this: 
+```
+   public class User {
+
+    @JsonProperty("id")
+    private int id;
+    @JsonProperty("email")
+    private String email;
+    @JsonProperty("first_name")
+    private String first_name;
+    @JsonProperty("last_name")
+    private String last_name;
+    @JsonProperty("avatar")
+    private String avatar;
+
+    public int getId() {
+        return id;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
+    public String getEmail() {
+        return email;
+    }
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    public String getFirst_name() {
+        return first_name;
+    }
+    public void setFirst_name(String first_name) {
+        this.first_name = first_name;
+    }
+    public String getLast_name() {
+        return last_name;
+    }
+    public void setLast_name(String last_name) {
+        this.last_name = last_name;
+    }
+    public String getAvatar() {
+        return avatar;
+    }
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
+    }
+	}
+```
+The idea is have one attribute per field to map on the response
+
+
+#Lippia Architecture	
 
 ![Lippia Architecture API](https://bitbucket.org/crowdarautomation/lippia-api-example-project/raw/a4fc4af87f4a788ec80296d73048d9b842314864/architectureApi.png)
 
