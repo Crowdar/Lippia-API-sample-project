@@ -15,5 +15,13 @@
     <wf.a.TimingAction plugin="workflow-api@2.36">
       <startTime>1567442387013</startTime>
     </wf.a.TimingAction>
+    <wf.a.TagsAction plugin="workflow-api@2.36">
+      <tags>
+        <entry>
+          <string>STAGE_STATUS</string>
+          <string>FAILED_AND_CONTINUED</string>
+        </entry>
+      </tags>
+    </wf.a.TagsAction>
   </actions>
 </Tag>
