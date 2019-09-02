@@ -1,0 +1,102 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<user>
+  <version>10</version>
+  <id>admin</id>
+  <fullName>admin</fullName>
+  <properties>
+    <jenkins.security.ApiTokenProperty>
+      <tokenStore>
+        <tokenList/>
+      </tokenStore>
+    </jenkins.security.ApiTokenProperty>
+    <io.jenkins.blueocean.autofavorite.user.FavoritingUserProperty plugin="blueocean-autofavorite@1.2.4">
+      <autofavoriteEnabled>true</autofavoriteEnabled>
+    </io.jenkins.blueocean.autofavorite.user.FavoritingUserProperty>
+    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@2.2.1">
+      <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash">
+        <entry>
+          <com.cloudbees.plugins.credentials.domains.Domain>
+            <specifications/>
+          </com.cloudbees.plugins.credentials.domains.Domain>
+          <java.util.concurrent.CopyOnWriteArrayList/>
+        </entry>
+        <entry>
+          <com.cloudbees.plugins.credentials.domains.Domain>
+            <name>blueocean-bitbucket-cloud-domain</name>
+            <description>blueocean-bitbucket-cloud-domain to store credentials by BlueOcean</description>
+            <specifications>
+              <io.jenkins.blueocean.rest.impl.pipeline.credential.BlueOceanDomainSpecification plugin="blueocean-pipeline-scm-api@1.18.0"/>
+            </specifications>
+          </com.cloudbees.plugins.credentials.domains.Domain>
+          <list>
+            <com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl>
+              <scope>USER</scope>
+              <id>bitbucket-cloud</id>
+              <description>Bitbucket server credentials</description>
+              <username>juanspoleti</username>
+              <password>{AQAAABAAAAAQsjr8TZdgE2wiE1NvDAu9z568S+iUW44Hx28xDYwBt2I=}</password>
+            </com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl>
+          </list>
+        </entry>
+        <entry>
+          <com.cloudbees.plugins.credentials.domains.Domain>
+            <name>blueocean-private-key-domain</name>
+            <specifications/>
+          </com.cloudbees.plugins.credentials.domains.Domain>
+          <list>
+            <com.cloudbees.jenkins.plugins.sshcredentials.impl.BasicSSHUserPrivateKey plugin="ssh-credentials@1.17.1">
+              <scope>USER</scope>
+              <id>jenkins-generated-ssh-key</id>
+              <description>jenkins-generated-ssh-key</description>
+              <username>admin</username>
+              <privateKeySource class="com.cloudbees.jenkins.plugins.sshcredentials.impl.BasicSSHUserPrivateKey$DirectEntryPrivateKeySource">
+                <privateKey>{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}</privateKey>
+              </privateKeySource>
+            </com.cloudbees.jenkins.plugins.sshcredentials.impl.BasicSSHUserPrivateKey>
+          </list>
+        </entry>
+      </domainCredentialsMap>
+    </com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty>
+    <hudson.plugins.emailext.watching.EmailExtWatchAction_-UserProperty plugin="email-ext@2.66">
+      <triggers/>
+    </hudson.plugins.emailext.watching.EmailExtWatchAction_-UserProperty>
+    <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@2.3.2">
+      <data class="concurrent-hash-map"/>
+    </hudson.plugins.favorite.user.FavoriteUserProperty>
+    <hudson.model.MyViewsProperty>
+      <views>
+        <hudson.model.AllView>
+          <owner class="hudson.model.MyViewsProperty" reference="../../.."/>
+          <name>all</name>
+          <filterExecutors>false</filterExecutors>
+          <filterQueue>false</filterQueue>
+          <properties class="hudson.model.View$PropertyList"/>
+        </hudson.model.AllView>
+      </views>
+    </hudson.model.MyViewsProperty>
+    <org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty plugin="display-url-api@2.3.2">
+      <providerId>default</providerId>
+    </org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty>
+    <hudson.model.PaneStatusProperties>
+      <collapsed/>
+    </hudson.model.PaneStatusProperties>
+    <jenkins.security.seed.UserSeedProperty>
+      <seed>aa9be712dc03c0b2</seed>
+    </jenkins.security.seed.UserSeedProperty>
+    <hudson.search.UserSearchProperty>
+      <insensitiveSearch>true</insensitiveSearch>
+    </hudson.search.UserSearchProperty>
+    <hudson.security.HudsonPrivateSecurityRealm_-Details>
+      <passwordHash>#jbcrypt:$2a$10$hZq9OVuidq1WaUf4DI2XnuZmQueEVYJ2YJMmkqz/RYinaiDRhKJE6</passwordHash>
+    </hudson.security.HudsonPrivateSecurityRealm_-Details>
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.24">
+      <emailAddress>admin@admin.com</emailAddress>
+    </hudson.tasks.Mailer_-UserProperty>
+    <jenkins.security.LastGrantedAuthoritiesProperty>
+      <roles>
+        <string>authenticated</string>
+      </roles>
+      <timestamp>1566327686318</timestamp>
+    </jenkins.security.LastGrantedAuthoritiesProperty>
+  </properties>
+</user>

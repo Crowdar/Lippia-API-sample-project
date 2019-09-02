@@ -1,9 +1,10 @@
 version: '2.2'
 services:
   jenkins:
-    image: jenkins/jenkins:lts
+    image: crowdar/jenkinsbo:demoweb
+    privileged: true
     ports:
-      - "8080:8080"
-      - "50000:50000"
+      - 8080:8080
+      - 50000:50000
     volumes:
-      - /home/pole/jenkinsHome:/var/jenkins_home
+      - ./jenkins_home:/var/jenkins_home
