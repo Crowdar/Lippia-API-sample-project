@@ -67,3 +67,19 @@ target/
 /.classpath
 /.project
 /.settings
+
+#vagrant files
+.vagrant/*
+
+# Jenkins
+jenkins_home/plugins
+jenkins_home/war/
+jenkins_home/caches
+jenkins_home/.m2/
+jenkins_home/tools/
+jenkins_home/logs/
+jenkins_home/.cache/
+jenkins_home/.java/
+jenkins_home/userContent/
+jenkins_home/workspace/
+
