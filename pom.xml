@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.crowdar</groupId>
-        <artifactId>Crowd-Root-Framework</artifactId>
-        <version>1.6.4</version>
+       <groupId>com.crowdar.lippia</groupId>
+       <artifactId>root</artifactId>
+       <version>1.6.6</version>
     </parent>
 
     <groupId>com.Crowdar</groupId>
@@ -53,9 +53,9 @@
     </profiles>
     <dependencies>
         <dependency>
-            <groupId>com.crowdar</groupId>
-            <artifactId>Crowd-Core-Framework</artifactId>
-            <version>1.6.4</version>
+            <groupId>com.crowdar.lippia</groupId>
+                <artifactId>core</artifactId>
+                <version>1.6.6</version>
         </dependency>
     </dependencies>
     <build>
