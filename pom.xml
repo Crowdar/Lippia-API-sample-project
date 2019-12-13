@@ -6,7 +6,7 @@
     <parent>
        <groupId>com.crowdar.lippia</groupId>
        <artifactId>root</artifactId>
-       <version>1.6.6</version>
+       <version>1.8.2</version>
     </parent>
 
     <groupId>com.Crowdar</groupId>
@@ -25,6 +25,7 @@
         </crowdar.cucumber.option>
         <crowdar.extent.report.path>cucumber-reports</crowdar.extent.report.path>
         <crowdar.extent.report.name>ApiExampleReport</crowdar.extent.report.name>
+        <crowdar.report.disable_screenshot_on_failure>true</crowdar.report.disable_screenshot_on_failure>
     </properties>
     <profiles>
         <profile>
@@ -55,7 +56,7 @@
         <dependency>
             <groupId>com.crowdar.lippia</groupId>
                 <artifactId>core</artifactId>
-                <version>1.6.6</version>
+                <version>1.8.2</version>
         </dependency>
     </dependencies>
     <build>
