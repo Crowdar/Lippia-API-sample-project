@@ -1,0 +1,11 @@
+{
+  "url": "https://postman-echo.com/",
+  "endpoint": "response-headers",
+  "headers": {
+  },
+  "urlParameters": {
+    "foo1": "{{value1}}",
+    "foo2": "{{value2}}"
+  }
+}
+
