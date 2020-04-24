@@ -1,0 +1,11 @@
+{
+  "url": "https://postman-echo.com/",
+  "endpoint": "status/500",
+  "headers": {
+    "Content-Type": "application/json"
+  },
+  "body": "",
+  "urlParameters": {
+  }
+}
+
