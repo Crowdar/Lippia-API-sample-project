@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.crowdar</groupId>
-        <artifactId>Crowd-Root-Framework</artifactId>
-        <version>1.6.4</version>
+        <groupId>com.crowdar.lippia</groupId>
+        <artifactId>root</artifactId>
+        <version>3.1.0</version>
     </parent>
 
     <groupId>com.Crowdar</groupId>
@@ -21,10 +21,11 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <base.api.url>https://reqres.in/api/users</base.api.url>
         <crowdar.cucumber.filter>@Example</crowdar.cucumber.filter>
-        <crowdar.cucumber.option>src/test/resources/features --glue com/crowdar --glue com/crowdar/bdd/cukes --glue ar/steps --glue ar/apiExampleProject/hook --tags ${crowdar.cucumber.filter} --tags ~@Ignore --plugin com.crowdar.report.CucumberExtentReport --plugin pretty
+        <crowdar.cucumber.option>src/test/resources/features --glue com/crowdar --glue com/crowdar/bdd/cukes --glue ar/steps --glue ar/apiExampleProject/hook --tags ${crowdar.cucumber.filter} --tags ~@Ignore --plugin report.CucumberReporter: --plugin pretty
         </crowdar.cucumber.option>
         <crowdar.extent.report.path>cucumber-reports</crowdar.extent.report.path>
         <crowdar.extent.report.name>ApiExampleReport</crowdar.extent.report.name>
+        <crowdar.projectType>API</crowdar.projectType>
     </properties>
     <profiles>
         <profile>
@@ -53,9 +54,14 @@
     </profiles>
     <dependencies>
         <dependency>
-            <groupId>com.crowdar</groupId>
-            <artifactId>Crowd-Core-Framework</artifactId>
-            <version>1.6.4</version>
+            <groupId>com.crowdar.lippia</groupId>
+            <artifactId>core</artifactId>
+            <version>3.1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.lippia.report</groupId>
+            <artifactId>extentreports-cucumber4-adapter</artifactId>
+            <version>1.1.0.10</version>
         </dependency>
     </dependencies>
     <build>
