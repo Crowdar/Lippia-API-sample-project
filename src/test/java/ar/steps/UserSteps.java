@@ -4,10 +4,7 @@ import api.model.Data;
 import api.config.EntityConfiguration;
 import com.crowdar.api.rest.APIManager;
 import com.crowdar.core.PageSteps;
-import cucumber.api.java.en.And;
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
+import io.cucumber.java.en.*;
 import org.testng.Assert;
 
 import java.lang.reflect.InvocationTargetException;

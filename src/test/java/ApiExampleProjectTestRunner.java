@@ -1,4 +1,3 @@
-import com.crowdar.bdd.cukes.TestNgRunner;
-
-public class ApiExampleProjectTestRunner extends TestNgRunner {
+import com.crowdar.bdd.cukes.TestNGSecuencialRunner;
+public class ApiExampleProjectTestRunner extends TestNGSecuencialRunner {
 }
