@@ -207,7 +207,7 @@ This project like all lippia products uses Extent reports that shows the status 
 ## Main Features: 
 - Added multiple reports of extent reports
 - Added the feature to handle the chrome options by a json file
-- Include project type properties that allow to decide wich library would need for the project
+- Include project type properties that allows to decide wich library would need for the project
 - Added the dependency for lippia report server 
 - Cucumber version updated
 
@@ -216,28 +216,27 @@ This project like all lippia products uses Extent reports that shows the status 
  - With this version of Lippia the user have the possibility to choose which kind of template for html reports is the best for the project requirements.
    The user only need to turn on the flag in the extent.properties file located in src/test/resources.
    
-## Chrome driver options file:   
- - Added the ability to set up the options for the chromedriver in order to have all of the properties setted. For example the user is allowed to set the headless value.
- ```
- {
-  "browserName": "chrome",
-  "goog:chromeOptions": {"args": ["disable-infobars","--headless","--window-size=1440x900", "--no-sandbox", "--disable-dev-shm-usage" , "--ignore-certificate-errors", "--start-maximized", "--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"],
-    "extensions": [],
-    "prefs": {"printing.enabled": false}
-  },
-  "platform": "ANY",
-  "recordVideo":"false"
-}
+   
+### Some examples of this are
+   
+#### Avenstack template:
+   ![aventstack_report] (https://bitbucket.org/crowdarautomation/lippia-web-sample-project/raw/91f94d530c4b87c88731a59e6285843926543b58/docs/img/aventstack_report.png)
+   
+#### BDD template:
+   ![bbd_report] (https://bitbucket.org/crowdarautomation/lippia-web-sample-project/raw/91f94d530c4b87c88731a59e6285843926543b58/docs/img/bbd_report.png)
+   
+#### Cards template:
+   ![cards_report] (https://bitbucket.org/crowdarautomation/lippia-web-sample-project/raw/91f94d530c4b87c88731a59e6285843926543b58/docs/img/cards_report.png)
+   
 
-```
-
-Also as you can see in this file you can set up the record video property to get the evidence of the each flow in a video
-
-
-## Chrome driver options file:
+## Project type options:
 - The project type option allows the user to say Lippia which library would need to download. For this project is setted the API one that only have all library needed for this kind of project.
   This option can be changed in the pom.xml file
- 
+  You can get more information checking the readme file from lippia-core project.
+  
+  API
+        crowdar.projectType=API
+
  
  
 
