@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.crowdar.lippia</groupId>
+        <groupId>io.lippia</groupId>
         <artifactId>root</artifactId>
-        <version>3.1.0</version>
+        <version>3.1.0.1</version>
     </parent>
 
     <groupId>com.Crowdar</groupId>
@@ -19,12 +19,12 @@
     <properties>
         <crowd.project.name>ApiExampleProject</crowd.project.name>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <base.api.url>https://reqres.in/api/users</base.api.url>
-        <crowdar.cucumber.filter>@Example</crowdar.cucumber.filter>
-        <crowdar.cucumber.option>src/test/resources/features --glue com/crowdar --glue com/crowdar/bdd/cukes --glue ar/steps --glue ar/apiExampleProject/hook --tags ${crowdar.cucumber.filter} --tags ~@Ignore --plugin report.CucumberReporter: --plugin pretty
-        </crowdar.cucumber.option>
-        <crowdar.extent.report.path>cucumber-reports</crowdar.extent.report.path>
-        <crowdar.extent.report.name>ApiExampleReport</crowdar.extent.report.name>
+        <base.api.url>http://localhost:8080</base.api.url>
+        <cucumber.stepsDefinitions></cucumber.stepsDefinitions>
+		<cucumber.hooks>--glue com/crowdar --glue com/crowdar/bdd/cukes --glue ar/steps --glue ar/apiExampleProject/hook</cucumber.hooks>
+		<cucumber.tags>'@Example'</cucumber.tags>
+		<cucumber.reporters>--plugin report.Reporter:</cucumber.reporters>
+		<crowdar.cucumber.option>src/test/resources/features ${cucumber.hooks} ${cucumber.stepsDefinitions} --tags 'not @Ignore' --tags ${cucumber.tags} ${cucumber.reporters}</crowdar.cucumber.option>
         <crowdar.projectType>API</crowdar.projectType>
     </properties>
     <profiles>
@@ -54,14 +54,14 @@
     </profiles>
     <dependencies>
         <dependency>
-            <groupId>com.crowdar.lippia</groupId>
-            <artifactId>core</artifactId>
-            <version>3.1.0</version>
+	        <groupId>io.lippia</groupId>
+	        <artifactId>core</artifactId>
+	        <version>3.1.0.1</version>
         </dependency>
         <dependency>
-            <groupId>io.lippia.report</groupId>
-            <artifactId>extentreports-cucumber4-adapter</artifactId>
-            <version>1.1.0.10</version>
+			<groupId>io.lippia.report</groupId>
+			<artifactId>cucumber4-adapter</artifactId>
+			<version>1.0</version>
         </dependency>
     </dependencies>
     <build>
@@ -77,6 +77,16 @@
                     <suiteXmlFiles>
                         <suiteXmlFile>${apiExample.runner}</suiteXmlFile>
                     </suiteXmlFiles>
+                 <systemPropertyVariables>
+						<LIPPIA_RS_API_HOST>http://vps2.crowdaronline.com</LIPPIA_RS_API_HOST>
+	                    <LIPPIA_RS_API_PORT>8085</LIPPIA_RS_API_PORT>
+<!--    						<LIPPIA_RS_API_HOST>http://localhost</LIPPIA_RS_API_HOST> -->
+<!-- 	                    <LIPPIA_RS_API_PORT>8085</LIPPIA_RS_API_PORT> -->
+<!-- 	  					<LIPPIA_RS_API_HOST>http://api</LIPPIA_RS_API_HOST> -->
+<!-- 	                    <LIPPIA_RS_API_PORT>8080</LIPPIA_RS_API_PORT> -->
+	                    <LIPPIA_RS_REPORT_NAME>Lippia Api</LIPPIA_RS_REPORT_NAME>
+	                    <LIPPIA_RS_PROJECT_NAME>API</LIPPIA_RS_PROJECT_NAME>
+	                 </systemPropertyVariables>
                 </configuration>
             </plugin>
         </plugins>

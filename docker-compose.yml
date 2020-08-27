@@ -1,10 +1,13 @@
-version: '2.2'
+version: "3.3"
 services:
   jenkins:
-    image: crowdar/jenkinsbo:demoweb
-    privileged: true
-    ports:
-      - 8080:8080
-      - 50000:50000
-    volumes:
-      - ./jenkins_home:/var/jenkins_home
+        image: jenkins/jenkins
+        privileged: true
+        user: root
+        ports:
+            - 8090:8080
+            - 50000:50000
+        volumes:
+            - /usr/bin/docker:/usr/local/bin/docker
+            - ./jenkins_home:/var/jenkins_home
+            - /var/run/docker.sock:/var/run/docker.sock
