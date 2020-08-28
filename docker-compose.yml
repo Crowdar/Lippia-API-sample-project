@@ -1,13 +1,10 @@
 version: "3.3"
 services:
-  jenkins:
-        image: jenkins/jenkins
-        privileged: true
-        user: root
-        ports:
-            - 8090:8080
-            - 50000:50000
-        volumes:
-            - /usr/bin/docker:/usr/local/bin/docker
-            - ./jenkins_home:/var/jenkins_home
-            - /var/run/docker.sock:/var/run/docker.sock
+    lippia:
+       image: crowdar/lippia:3.2.1.1          
+       volumes:  
+            - .:/opt/workspace/automation
+       working_dir: /opt/workspace/automation
+       environment:
+            - WORKSPACE=/opt/workspace/automation
+            - CUSTOM_COMMAND=mvn clean test -PParalelo -Dcucumber.tags=@Success

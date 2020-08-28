@@ -1,7 +1,7 @@
 Feature: Api example
   As an api user I want to execute request in order to get proper responses
 
-  @Example
+  @Example @Success
   Scenario Outline: Example scenario for get user data
     Given As an api user for example endpoint
     When I perform a '<operation>' to '<entity>' endpoint with the '<jsonName>'
@@ -12,9 +12,11 @@ Feature: Api example
       | jsonName    | statusCode | id | operation | entity |
       | exampleJson | 200        | 2  | GET       | USER   |
       | createUser  | 201        |    | POST      | USER   |
+      | createUser  | 201        |    | POST      | USER   |
+      | createUser  | 201        |    | POST      | USER   |
 
-  @Example
-  Scenario Outline: Example scenario for error 500
+  @Example @Fail
+  Scenario Outline: Example scenario for error <statusCode>
     Given As an api user for example endpoint
     When I perform a '<operation>' to '<entity>' endpoint with the '<jsonName>'
     Then I will get the proper status code '<statusCode>'
