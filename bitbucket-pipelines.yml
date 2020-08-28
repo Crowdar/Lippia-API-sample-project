@@ -13,7 +13,7 @@ pipelines:
             - export PROJECT_VERSION=$(mvn org.apache.maven.plugins:maven-help-plugin:3.1.0:evaluate -Dexpression=project.version -q -DforceStdout)
             - git tag $PROJECT_VERSION
             - git remote add github https://$GITHUB_USER_E:$GITHUB_TOKEN_E@github.com/Crowdar/Lippia-API-sample-project.git
-            - git pull -u github
+            - git pull github
             - git push -u github
             - git push -u github $PROJECT_VERSION
             - git push origin $PROJECT_VERSION
