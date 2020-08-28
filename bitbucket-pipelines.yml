@@ -1,4 +1,4 @@
-image: maven:3.3.9-jdk-8
+image: crowdar/lippia:3.2.1.1
 
 pipelines:
   branches:
@@ -9,5 +9,11 @@ pipelines:
             - docker
           trigger: automatic
           script:
-            - git remote add github https://$GITHUB_USER:$GITHUB_TOKEN@github.com/Crowdar/Lippia-API-sample-project.git
+            - mvn clean test -PParalelo -Dcucumber.tags=@Success
+            - export PROJECT_VERSION=$(mvn org.apache.maven.plugins:maven-help-plugin:3.1.0:evaluate -Dexpression=project.version -q -DforceStdout)
+            - git tag $PROJECT_VERSION
+            - git push origin $PROJECT_VERSION
+            - git remote add github https://$GITHUB_USER_E:$GITHUB_TOKEN_E@github.com/Crowdar/Lippia-API-sample-project.git
             - git push -u github
+            - git push -u github $PROJECT_VERSION
+      

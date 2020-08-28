@@ -4,14 +4,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.crowdar.lippia</groupId>
+        <groupId>io.lippia</groupId>
         <artifactId>root</artifactId>
-        <version>3.1.0</version>
+        <version>3.2.1.1</version>
     </parent>
 
     <groupId>com.Crowdar</groupId>
     <artifactId>lippia-api-example-project</artifactId>
-    <version>1.0-SNAPSHOT</version>
     <name>api-rest-automation</name>
     <packaging>jar</packaging>
     <url>http://maven.apache.org</url>
@@ -20,48 +19,37 @@
         <crowd.project.name>ApiExampleProject</crowd.project.name>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <base.api.url>https://reqres.in/api/users</base.api.url>
-        <crowdar.cucumber.filter>@Example</crowdar.cucumber.filter>
-        <crowdar.cucumber.option>src/test/resources/features --glue com/crowdar --glue com/crowdar/bdd/cukes --glue ar/steps --glue ar/apiExampleProject/hook --tags ${crowdar.cucumber.filter} --tags ~@Ignore --plugin report.CucumberReporter: --plugin pretty
-        </crowdar.cucumber.option>
-        <crowdar.extent.report.path>cucumber-reports</crowdar.extent.report.path>
-        <crowdar.extent.report.name>ApiExampleReport</crowdar.extent.report.name>
+        <cucumber.stepsDefinitions>--glue ar/steps</cucumber.stepsDefinitions>
+		<cucumber.hooks>--glue com/crowdar/bdd/cukes --glue ar/apiExampleProject/hook</cucumber.hooks>
+		<cucumber.tags>@Success</cucumber.tags>
+		<cucumber.reporters>--plugin pretty</cucumber.reporters>
+		<crowdar.cucumber.option>src/test/resources/features ${cucumber.hooks} ${cucumber.stepsDefinitions} --tags 'not @Ignore' --tags ${cucumber.tags} ${cucumber.reporters}</crowdar.cucumber.option>
         <crowdar.projectType>API</crowdar.projectType>
     </properties>
     <profiles>
         <profile>
             <id>Secuencial</id>
             <activation>
-                <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
                 <apiExample.runner>testng.xml</apiExample.runner>
-                <crowdar.extent.host.name>LocalMachine</crowdar.extent.host.name>
-                <crowdar.extent.environment>Local</crowdar.extent.environment>
-                <crowdar.extent.user.name>User.name</crowdar.extent.user.name>
             </properties>
         </profile>
         <profile>
             <id>Paralelo</id>
             <activation>
+            	<activeByDefault>true</activeByDefault>
             </activation>
             <properties>
-                <apiExample.runner>testngParallel.xml</apiExample.runner>
-                <crowdar.extent.host.name>LocalMachine</crowdar.extent.host.name>
-                <crowdar.extent.environment>Local</crowdar.extent.environment>
-                <crowdar.extent.user.name>User.name</crowdar.extent.user.name>
+                <apiExample.runner>testngParalell.xml</apiExample.runner>
             </properties>
         </profile>
     </profiles>
     <dependencies>
         <dependency>
-            <groupId>com.crowdar.lippia</groupId>
-            <artifactId>core</artifactId>
-            <version>3.1.0</version>
-        </dependency>
-        <dependency>
-            <groupId>io.lippia.report</groupId>
-            <artifactId>extentreports-cucumber4-adapter</artifactId>
-            <version>1.1.0.10</version>
+	        <groupId>io.lippia</groupId>
+	        <artifactId>core</artifactId>
+	        <version>3.2.1.1</version>
         </dependency>
     </dependencies>
     <build>
@@ -70,9 +58,9 @@
         </filters>
         <plugins>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.22.1</version>
+               <groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.0.0-M4</version>
                 <configuration>
                     <suiteXmlFiles>
                         <suiteXmlFile>${apiExample.runner}</suiteXmlFile>
@@ -81,12 +69,11 @@
             </plugin>
         </plugins>
     </build>
-
-       <repositories>
+    <repositories>
 		<repository>
 			<id>crowdarRepo</id>
 			<name>crowdar-repository</name>
-			<url>http://nexus-v3-repositories.automation.crowdaronline.com/repository/maven-public/</url>
+			<url>https://nexus-v3-repositories.automation.crowdaronline.com/repository/maven-public/</url>
 		</repository>
 	</repositories>
     

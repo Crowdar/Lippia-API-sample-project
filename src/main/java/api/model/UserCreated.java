@@ -12,7 +12,7 @@ public class UserCreated {
 
     @JsonProperty("id")
     private String id;
-
+    
     public String getName() {
         return name;
     }
@@ -35,7 +35,6 @@ public class UserCreated {
 
     public void setId(String id) {
         this.id = id;
-    }
-
+    }   
 
 }
