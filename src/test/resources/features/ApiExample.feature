@@ -3,8 +3,7 @@ Feature: Api example
 
   @Example @Success
   Scenario Outline: Example scenario for get user data
-    Given As an api user for example endpoint
-    When I perform a '<operation>' to '<entity>' endpoint with the '<jsonName>'
+    When I perform a '<operation>' to '<entity>' endpoint with the '<jsonName>' and ''
     Then I will get the proper status code '<statusCode>'
     And The proper 'Id' '<id>' returned in the response
 
@@ -24,3 +23,14 @@ Feature: Api example
     Examples:
       | jsonName     | statusCode | operation | entity |
       | errorRequest | 500        | GET       | USER   |
+
+
+  @Example @Success
+  Scenario Outline: Example scenario for input parameters
+    When I perform a '<operation>' to '<entity>' endpoint with the '<jsonRequestName>' and '<inputParameters>'
+    Then I will get the proper status code '<statusCode>'
+    And I will get the proper response in '<jsonResponseName>'
+
+    Examples:
+      | jsonRequestName        | statusCode | operation | entity           | inputParameters         | jsonResponseName        |
+      | responseHeadersRequest | 200        | GET       | RESPONSE_HEADERS | value1:bar1,value2:bar2 | responseHeadersResponse |

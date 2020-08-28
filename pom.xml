@@ -16,7 +16,6 @@
     <url>http://maven.apache.org</url>
 
     <properties>
-        <crowd.project.name>ApiExampleProject</crowd.project.name>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <base.api.url>https://reqres.in/api/users</base.api.url>
         <cucumber.stepsDefinitions>--glue ar/steps</cucumber.stepsDefinitions>
@@ -25,6 +24,7 @@
 		<cucumber.reporters>--plugin pretty</cucumber.reporters>
 		<crowdar.cucumber.option>src/test/resources/features ${cucumber.hooks} ${cucumber.stepsDefinitions} --tags 'not @Ignore' --tags ${cucumber.tags} ${cucumber.reporters}</crowdar.cucumber.option>
         <crowdar.projectType>API</crowdar.projectType>
+
     </properties>
     <profiles>
         <profile>
