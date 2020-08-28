@@ -38,13 +38,16 @@ A typical Lippia Test Automation project usually looks like this
 │   │   └── com
 │   │       └── crowdar
 │   │           └── api
-│	│				├── config
-│	│				│	├── EntityConfiguration.java
-│   │               ├── model
-│   │               │   ├── Data.java
-│	│				│	├── User.java
+│   │		 └── config
+│   │ 	         |    └── EntityConfiguration.java
+│   │            └── model
+│   │               │   └── Data.java
+│   │               │   └── ResponseHeaders.java
+│   │		    │	└── User.java
 │   │               │   └── UserCreated.java
+│   │               │   └── Users.java
 │   │               └── services
+│   │                   └── ResponseHeadersService.java
 │   │                   └── UserService.java
 │   └── resources
 │       ├── config.properties
@@ -56,14 +59,22 @@ A typical Lippia Test Automation project usually looks like this
     │   ├── ApiExampleProjectTestRunner.java
     │   └──
 	└── steps	
+	│   └── ResponseHeadersSteps.java
 	│   └── UserSteps.java
 	└── apiExampleProject
-    │           ├── Hooks.java
+    │           └── Hooks.java
     └── resources
         └── features
             └── ApiExample.feature
 		└── jsons
-            └── createUser.json
+	└── jsons
+            └── request
+	    	└── createUser.json
+		└── errorRequest.json
+		└── exampleJson.json
+		└── responseHeadersRequest.json
+	    └── response
+	    	└── responseHeadersResponse.json
 ```
 
 Folder's description:
@@ -73,6 +84,8 @@ Folder's description:
 |main\java\\...\examples\model\\\*.java|Folder with all the **Mapped Objects** matching steps with java code|
 |main\java\\...\examples\config\\\*Steps.java|Folder with all the **Settings** wich match with Gherkin Test Scenarios |
 |test\resources\features\\\*.feature|Folder with all the **feature files** containing **Test Scenarios** and **Sample Data** |
+|test\resources\request\\\*.json|Folder with all the **json files** containing **Request** data |
+|test\resources\response\\\*.json|Folder with all the **json files** containing **Response** data if necessary|
 |main\resources|Folder with all configuration needed to run Lippia |
 
 In this example, *ApiExample* is the first endpoint the framework will interact with. The **steps** defined in *UserSteps.java* to execute the *Test Scenarios* defined in Gherkin language. 
@@ -201,6 +214,7 @@ This project like all lippia products uses Extent reports that shows the status 
     [`Getting started - Linux User`](https://bitbucket.org/crowdarautomation/lippia-api-example-project/src/master/docs/README_Linux.md)
 - If you are Windws user
     [`Getting started - Windows User`](https://bitbucket.org/crowdarautomation/lippia-api-example-project/src/master/docs/README_Windows.md)
+<<<<<<< HEAD
     
 # Update Version Lippia 3
 
@@ -245,3 +259,5 @@ This project like all lippia products uses Extent reports that shows the status 
  
 
     
+=======
+>>>>>>> 4ed41e3af605076073e8d76202f9f40ebfb16eb6
