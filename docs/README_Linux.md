@@ -1,203 +1,169 @@
 ## Lippia Web sample project - Linux users
 
 ## System Requirements :
-+ JDK 8: https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html   
-	  https://openjdk.java.net/install/   
-+ Maven 3.X: https://maven.apache.org/download.cgi   
 + Docker 18.09: https://docs.docker.com/install/linux/docker-ce/ubuntu/
 + Docker compose 1.24: https://docs.docker.com/compose/install/
 
 # Getting started
- [Download]: <https://bitbucket.org/crowdarautomation/lippia-web-example-project/get/fdc35889edbf.zip>
+
+[Download]: <https://bitbucket.org/crowdarautomation/lippia-api-sample-project/get/5db6458fef4a.zip>
+ 
 - [Download] and unzip the source repository for this guide, or clone it using Git:
-    ``` $ git clone https://bitbucket.org/crowdarautomation/lippia-web-example-project.git ```
+    ``` $ git clone https://bitbucket.org/crowdarautomation/lippia-api-sample-project.git ```
 - Go to root directory  
-    ``` $ cd lippia-web-example-project ```
+    ``` $ cd lippia-api-sample-project ```
 ## Strategies to run
 ***
-- [Local](#local) (running tests building project with maven from command line)
-- [Stack](#sarasa) (running docker-compose and only clicking "Build job" on jenkins)  
+
+- [Local] (#local) (running tests building project with maven from command line)
+
 
 #### Local strategy
 ##### Executing tests in you local machine from command line
 - From terminal  execute  
- `$ mvn clean test`    
    
 ```
-[INFO] -------------------------------------------------------
-[INFO]  T E S T S
-[INFO] -------------------------------------------------------
-[INFO] Running TestSuite
-WARNING: Found tags option '~@Ignore'. Support for '~@tag' will be removed from the next release of Cucumber-JVM. Please use 'not @tag' instead.
-TESTCASE El cliente inicia en la busqueda de un wikipedia en google STARTED EN HILO :12
-log4j:WARN No appenders could be found for logger (com.crowdar.report.ExtentReportManager).
-log4j:WARN Please initialize the log4j system properly.
-log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
-TEST STEP STARTED EN HILO :12
-SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
-SLF4J: Defaulting to no-operation (NOP) logger implementation
-SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-Sep 04, 2019 12:38:01 PM org.openqa.selenium.remote.DesiredCapabilities chrome
-INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
-Starting ChromeDriver 76.0.3809.126 (d80a294506b4c9d18015e755cee48f953ddc3f2f-refs/branch-heads/3809@{#1024}) on port 14439
-Only local connections are allowed.
-Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
-Sep 04, 2019 12:38:02 PM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFO: Detected dialect: W3C
-TEST STEP FINISHED EN HILO :12
-TEST STEP STARTED EN HILO :12
-TEST STEP FINISHED EN HILO :12
-TEST STEP STARTED EN HILO :12
-TEST STEP FINISHED EN HILO :12
-TESTCASE El cliente inicia en la busqueda de un wikipedia en google STARTED EN HILO :12
-TEST STEP STARTED EN HILO :12
-Sep 04, 2019 12:38:04 PM org.openqa.selenium.remote.DesiredCapabilities chrome
-INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
-Starting ChromeDriver 76.0.3809.126 (d80a294506b4c9d18015e755cee48f953ddc3f2f-refs/branch-heads/3809@{#1024}) on port 8281
-Only local connections are allowed.
-Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
-Sep 04, 2019 12:38:04 PM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFO: Detected dialect: W3C
-TEST STEP FINISHED EN HILO :12
-TEST STEP STARTED EN HILO :12
-TEST STEP FINISHED EN HILO :12
-TEST STEP STARTED EN HILO :12
-TEST STEP FINISHED EN HILO :12
-TESTCASE El cliente inicia en la busqueda de un wikipedia en google STARTED EN HILO :12
-TEST STEP STARTED EN HILO :12
-Sep 04, 2019 12:38:08 PM org.openqa.selenium.remote.DesiredCapabilities chrome
-INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
-Starting ChromeDriver 76.0.3809.126 (d80a294506b4c9d18015e755cee48f953ddc3f2f-refs/branch-heads/3809@{#1024}) on port 25377
-Only local connections are allowed.
-Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
-Sep 04, 2019 12:38:08 PM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFO: Detected dialect: W3C
-TEST STEP FINISHED EN HILO :12
-TEST STEP STARTED EN HILO :12
-TEST STEP FINISHED EN HILO :12
-TEST STEP STARTED EN HILO :12
-TEST STEP FINISHED EN HILO :12
-TESTCASE El cliente inicia en la busqueda de un wikipedia en google STARTED EN HILO :12
-TEST STEP STARTED EN HILO :12
-Sep 04, 2019 12:38:12 PM org.openqa.selenium.remote.DesiredCapabilities chrome
-INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
-Starting ChromeDriver 76.0.3809.126 (d80a294506b4c9d18015e755cee48f953ddc3f2f-refs/branch-heads/3809@{#1024}) on port 13831
-Only local connections are allowed.
-Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
-Sep 04, 2019 12:38:12 PM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFO: Detected dialect: W3C
-TEST STEP FINISHED EN HILO :12
-TEST STEP STARTED EN HILO :12
-TEST STEP FINISHED EN HILO :12
-TEST STEP STARTED EN HILO :12
-TEST STEP FINISHED EN HILO :12
-TESTCASE El cliente inicia en la busqueda de un wikipedia en google STARTED EN HILO :12
-TEST STEP STARTED EN HILO :12
-Sep 04, 2019 12:38:16 PM org.openqa.selenium.remote.DesiredCapabilities chrome
-INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
-Starting ChromeDriver 76.0.3809.126 (d80a294506b4c9d18015e755cee48f953ddc3f2f-refs/branch-heads/3809@{#1024}) on port 20650
-Only local connections are allowed.
-Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
-Sep 04, 2019 12:38:16 PM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFO: Detected dialect: W3C
-TEST STEP FINISHED EN HILO :12
-TEST STEP STARTED EN HILO :12
-TEST STEP FINISHED EN HILO :12
-TEST STEP STARTED EN HILO :12
-TEST STEP FINISHED EN HILO :12
+$ sudo docker-compose -f docker-compose.yml up --abort-on-container-exit --exit-code-from lippia
 
-5 Scenarios (5 passed)
-15 Steps (15 passed)
-0m18.753s
+Starting lippia-api-sample-project_lippia_1 ... done
+Attaching to lippia-api-sample-project_lippia_1
+lippia_1  | Running custom Command mvn clean test -PParalelo -Dcucumber.tags=@Success
+lippia_1  | [INFO] Scanning for projects...
+lippia_1  | [INFO] 
+lippia_1  | [INFO] ---------------< com.Crowdar:lippia-api-example-project >---------------
+lippia_1  | [INFO] Building api-rest-automation 3.2.1.1
+lippia_1  | [INFO] --------------------------------[ jar ]---------------------------------
+lippia_1  | Downloading from central: https://repo.maven.apache.org/maven2/io/grpc/grpc-core/maven-metadata.xml
+lippia_1  | Downloading from crowdarRepo: https://nexus-v3-repositories.automation.crowdaronline.com/repository/maven-public/io/grpc/grpc-core/maven-metadata.xml
+Downloaded from central: https://repo.maven.apache.org/maven2/io/grpc/grpc-core/maven-metadata.xml (2.7 kB at 1.9 kB/s)
+lippia_1  | Downloaded from crowdarRepo: https://nexus-v3-repositories.automation.crowdaronline.com/repository/maven-public/io/grpc/grpc-core/maven-metadata.xml (2.7 kB at 1.8 kB/s)
+lippia_1  | Downloading from crowdarRepo: https://nexus-v3-repositories.automation.crowdaronline.com/repository/maven-public/io/netty/netty-codec-http2/maven-metadata.xml
+lippia_1  | Downloading from central: https://repo.maven.apache.org/maven2/io/netty/netty-codec-http2/maven-metadata.xml
+Downloaded from central: https://repo.maven.apache.org/maven2/io/netty/netty-codec-http2/maven-metadata.xml (2.8 kB at 7.9 kB/s)
+lippia_1  | Downloaded from crowdarRepo: https://nexus-v3-repositories.automation.crowdaronline.com/repository/maven-public/io/netty/netty-codec-http2/maven-metadata.xml (2.8 kB at 6.5 kB/s)
+lippia_1  | [INFO] 
+lippia_1  | [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ lippia-api-example-project ---
+lippia_1  | [INFO] Deleting /opt/workspace/automation/target
+lippia_1  | [INFO] 
+lippia_1  | [INFO] --- maven-resources-plugin:2.4:resources (default-resources) @ lippia-api-example-project ---
+lippia_1  | [INFO] Using 'UTF-8' encoding to copy filtered resources.
+lippia_1  | [INFO] Copying 3 resources
+lippia_1  | [INFO] 
+lippia_1  | [INFO] --- maven-compiler-plugin:3.7.0:compile (default-compile) @ lippia-api-example-project ---
+lippia_1  | [INFO] Changes detected - recompiling the module!
+lippia_1  | [INFO] Compiling 8 source files to /opt/workspace/automation/target/classes
+lippia_1  | [INFO] 
+lippia_1  | [INFO] --- maven-resources-plugin:2.4:testResources (default-testResources) @ lippia-api-example-project ---
+lippia_1  | [INFO] Using 'UTF-8' encoding to copy filtered resources.
+lippia_1  | [INFO] Copying 6 resources
+lippia_1  | [INFO] 
+lippia_1  | [INFO] --- maven-compiler-plugin:3.7.0:testCompile (default-testCompile) @ lippia-api-example-project ---
+lippia_1  | [INFO] Changes detected - recompiling the module!
+lippia_1  | [INFO] Compiling 5 source files to /opt/workspace/automation/target/test-classes
+lippia_1  | [INFO] /opt/workspace/automation/src/test/java/ar/steps/UserSteps.java: Some input files use or override a deprecated API.
+lippia_1  | [INFO] /opt/workspace/automation/src/test/java/ar/steps/UserSteps.java: Recompile with -Xlint:deprecation for details.
+lippia_1  | [INFO] /opt/workspace/automation/src/test/java/ar/steps/UserSteps.java: /opt/workspace/automation/src/test/java/ar/steps/UserSteps.java uses unchecked or unsafe operations.
+lippia_1  | [INFO] /opt/workspace/automation/src/test/java/ar/steps/UserSteps.java: Recompile with -Xlint:unchecked for details.
+lippia_1  | [INFO] 
+lippia_1  | [INFO] --- maven-surefire-plugin:3.0.0-M4:test (default-test) @ lippia-api-example-project ---
+lippia_1  | [INFO] 
+lippia_1  | [INFO] -------------------------------------------------------
+lippia_1  | [INFO]  T E S T S
+lippia_1  | [INFO] -------------------------------------------------------
+lippia_1  | [INFO] Running TestSuite
+lippia_1  | 08/09/20 17:11:36 INFO  BasicHook:20 - ------ Starting -----Example scenario for get user data-----
+lippia_1  | 08/09/20 17:11:36 INFO  BasicHook:20 - ------ Starting -----Example scenario for get user data-----
+lippia_1  | 08/09/20 17:11:36 INFO  BasicHook:20 - ------ Starting -----Example scenario for get user data-----
+lippia_1  | 08/09/20 17:11:36 INFO  BasicHook:20 - ------ Starting -----Example scenario for get user data-----
+lippia_1  | 08/09/20 17:11:36 INFO  BasicHook:20 - ------ Starting -----Example scenario for input parameters-----
+lippia_1  | 08/09/20 17:11:37 INFO  MethodsService:109 - >>>Request: https://postman-echo.com/response-headers, {foo1=bar1, foo2=bar2}
+lippia_1  | 08/09/20 17:11:37 INFO  MethodsService:109 - >>>Request: https://reqres.in/api/users, {id=2}, {Content-Type=application/json}
+lippia_1  | 08/09/20 17:11:37 INFO  MethodsService:109 - >>>Request: https://reqres.in/api/users, {Content-Type=application/json}, {"name":"test","job":"leader"}
+lippia_1  | 08/09/20 17:11:37 INFO  MethodsService:109 - >>>Request: https://reqres.in/api/users, {Content-Type=application/json}, {"name":"test","job":"leader"}
+lippia_1  | 08/09/20 17:11:37 INFO  MethodsService:109 - >>>Request: https://reqres.in/api/users, {Content-Type=application/json}, {"name":"test","job":"leader"}
+lippia_1  | 08/09/20 17:11:39 INFO  RestClient:90 - >>>Response: <200 OK,api.model.ResponseHeaders@4f611174,{Date=[Tue, 08 Sep 2020 17:11:39 GMT], Content-Type=[application/json; charset=utf-8], Content-Length=[29], Connection=[keep-alive], foo1=[bar1], foo2=[bar2], ETag=[W/"1d-PgOLWVqd2mMvcpNzTF0Cfy4hftg"], Vary=[Accept-Encoding], set-cookie=[sails.sid=s%3APz8ETqhRBfW8n95KfKTvRTrHDtHUpWYT.o2k%2BOMOhj%2FrpM2gobjrOQA7jPdofkC2qQdiW%2BywILZ0; Path=/; HttpOnly]}>
+lippia_1  | 08/09/20 17:11:39 INFO  BasicHook:35 - ------ Ending -----Example scenario for input parameters-----
+lippia_1  | 08/09/20 17:11:39 INFO  RestClient:90 - >>>Response: <201 Created,api.model.UserCreated@68e41f65,{Date=[Tue, 08 Sep 2020 17:11:39 GMT], Content-Type=[application/json; charset=utf-8], Content-Length=[80], Connection=[keep-alive], Set-Cookie=[__cfduid=d06ed84d889d9ad6a0a1e5e85d1aab0a41599585099; expires=Thu, 08-Oct-20 17:11:39 GMT; path=/; domain=.reqres.in; HttpOnly; SameSite=Lax; Secure], X-Powered-By=[Express], Access-Control-Allow-Origin=[*], Etag=[W/"50-TilfMnduwRRUzQcT4oGnBccp4mM"], Via=[1.1 vegur], CF-Cache-Status=[DYNAMIC], cf-request-id=[05104cb613000008f181220200000001], Expect-CT=[max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"], Server=[cloudflare], CF-RAY=[5cfa4a368e5b08f1-EZE]}>
+lippia_1  | 08/09/20 17:11:39 INFO  BasicHook:35 - ------ Ending -----Example scenario for get user data-----
+lippia_1  | 08/09/20 17:11:39 INFO  RestClient:90 - >>>Response: <201 Created,api.model.UserCreated@57b97da8,{Date=[Tue, 08 Sep 2020 17:11:39 GMT], Content-Type=[application/json; charset=utf-8], Content-Length=[80], Connection=[keep-alive], Set-Cookie=[__cfduid=dcebb09991cd857fd88d8a399a223c4731599585099; expires=Thu, 08-Oct-20 17:11:39 GMT; path=/; domain=.reqres.in; HttpOnly; SameSite=Lax; Secure], X-Powered-By=[Express], Access-Control-Allow-Origin=[*], Etag=[W/"50-WxAOKovtkqnHEwSBx30dIlS+AoY"], Via=[1.1 vegur], CF-Cache-Status=[DYNAMIC], cf-request-id=[05104cb618000008b81fb7a200000001], Expect-CT=[max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"], Server=[cloudflare], CF-RAY=[5cfa4a368c3208b8-EZE]}>
+lippia_1  | 08/09/20 17:11:39 INFO  BasicHook:35 - ------ Ending -----Example scenario for get user data-----
+lippia_1  | 08/09/20 17:11:39 INFO  RestClient:90 - >>>Response: <201 Created,api.model.UserCreated@45523162,{Date=[Tue, 08 Sep 2020 17:11:39 GMT], Content-Type=[application/json; charset=utf-8], Content-Length=[80], Connection=[keep-alive], Set-Cookie=[__cfduid=d4585eed263b3f7bfe556108d4e8398921599585099; expires=Thu, 08-Oct-20 17:11:39 GMT; path=/; domain=.reqres.in; HttpOnly; SameSite=Lax; Secure], X-Powered-By=[Express], Access-Control-Allow-Origin=[*], Etag=[W/"50-vR3erxZtL/w7IMPJ/9yz6BejjXE"], Via=[1.1 vegur], CF-Cache-Status=[DYNAMIC], cf-request-id=[05104cb618000008b466abd200000001], Expect-CT=[max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"], Server=[cloudflare], CF-RAY=[5cfa4a3689ef08b4-EZE]}>
+lippia_1  | 08/09/20 17:11:39 INFO  BasicHook:35 - ------ Ending -----Example scenario for get user data-----
+lippia_1  | 08/09/20 17:11:39 INFO  RestClient:90 - >>>Response: <200 OK,api.model.Data@4a082bc9,{Date=[Tue, 08 Sep 2020 17:11:39 GMT], Content-Type=[application/json; charset=utf-8], Transfer-Encoding=[chunked], Connection=[keep-alive], Set-Cookie=[__cfduid=d4585eed263b3f7bfe556108d4e8398921599585099; expires=Thu, 08-Oct-20 17:11:39 GMT; path=/; domain=.reqres.in; HttpOnly; SameSite=Lax; Secure], X-Powered-By=[Express], Access-Control-Allow-Origin=[*], Etag=[W/"173-1Z8bn0V7UjH6FK7NCaza1ccWXQk"], Via=[1.1 vegur], Cache-Control=[max-age=14400], CF-Cache-Status=[MISS], cf-request-id=[05104cb614000008b46f1a6200000001], Expect-CT=[max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"], Vary=[Accept-Encoding], Server=[cloudflare], CF-RAY=[5cfa4a3689e308b4-EZE]}>
+lippia_1  | 08/09/20 17:11:39 INFO  BasicHook:35 - ------ Ending -----Example scenario for get user data-----
+lippia_1  | Feature: Api example
+lippia_1  |   As an api user I want to execute request in order to get proper responses
+lippia_1  | 
+lippia_1  |   @Example @Success
+lippia_1  |   Scenario Outline: Example scenario for get user data # src/test/resources/features/ApiExample.feature:5
+lippia_1  |     When I perform a '<operation>' to '<entity>' endpoint with the '<jsonName>' and ''
+lippia_1  |     Then I will get the proper status code '<statusCode>'
+lippia_1  |     And The proper 'Id' '<id>' returned in the response
+lippia_1  | 
+lippia_1  |     Examples: 
+lippia_1  | 
+lippia_1  |   @Example @Success
+lippia_1  |   Scenario Outline: Example scenario for get user data                      # src/test/resources/features/ApiExample.feature:12
+lippia_1  |     When I perform a 'GET' to 'USER' endpoint with the 'exampleJson' and '' # UserSteps.doRequest(String,String,String,String)
+lippia_1  |     Then I will get the proper status code '200'                            # UserSteps.iWillGetTheProperStatusCodeStatusCode(String)
+lippia_1  |     And The proper 'Id' '2' returned in the response                        # UserSteps.theProperIdReturnedInTheResponse(String,String)
+lippia_1  | 
+lippia_1  |   @Example @Success
+lippia_1  |   Scenario Outline: Example scenario for get user data                      # src/test/resources/features/ApiExample.feature:13
+lippia_1  |     When I perform a 'POST' to 'USER' endpoint with the 'createUser' and '' # UserSteps.doRequest(String,String,String,String)
+lippia_1  |     Then I will get the proper status code '201'                            # UserSteps.iWillGetTheProperStatusCodeStatusCode(String)
+lippia_1  |     And The proper 'Id' '' returned in the response                         # UserSteps.theProperIdReturnedInTheResponse(String,String)
+lippia_1  | 
+lippia_1  |   @Example @Success
+lippia_1  |   Scenario Outline: Example scenario for get user data                      # src/test/resources/features/ApiExample.feature:14
+lippia_1  |     When I perform a 'POST' to 'USER' endpoint with the 'createUser' and '' # UserSteps.doRequest(String,String,String,String)
+lippia_1  |     Then I will get the proper status code '201'                            # UserSteps.iWillGetTheProperStatusCodeStatusCode(String)
+lippia_1  |     And The proper 'Id' '' returned in the response                         # UserSteps.theProperIdReturnedInTheResponse(String,String)
+lippia_1  | 
+lippia_1  |   @Example @Success
+lippia_1  |   Scenario Outline: Example scenario for get user data                      # src/test/resources/features/ApiExample.feature:15
+lippia_1  |     When I perform a 'POST' to 'USER' endpoint with the 'createUser' and '' # UserSteps.doRequest(String,String,String,String)
+lippia_1  |     Then I will get the proper status code '201'                            # UserSteps.iWillGetTheProperStatusCodeStatusCode(String)
+lippia_1  |     And The proper 'Id' '' returned in the response                         # UserSteps.theProperIdReturnedInTheResponse(String,String)
+lippia_1  | 
+lippia_1  |   @Example @Success
+lippia_1  |   Scenario Outline: Example scenario for input parameters # src/test/resources/features/ApiExample.feature:29
+lippia_1  |     When I perform a '<operation>' to '<entity>' endpoint with the '<jsonRequestName>' and '<inputParameters>'
+lippia_1  |     Then I will get the proper status code '<statusCode>'
+lippia_1  |     And I will get the proper response in '<jsonResponseName>'
+lippia_1  | 
+lippia_1  |     Examples: 
+lippia_1  | 
+lippia_1  |   @Example @Success
+lippia_1  |   Scenario Outline: Example scenario for input parameters                                                                 # src/test/resources/features/ApiExample.feature:36
+lippia_1  |     When I perform a 'GET' to 'RESPONSE_HEADERS' endpoint with the 'responseHeadersRequest' and 'value1:bar1,value2:bar2' # UserSteps.doRequest(String,String,String,String)
+lippia_1  |     Then I will get the proper status code '200'                                                                          # UserSteps.iWillGetTheProperStatusCodeStatusCode(String)
+lippia_1  |     And I will get the proper response in 'responseHeadersResponse'                                                       # ResponseHeadersSteps.iWillGetTheProperResponse(String)
+lippia_1  | [INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.033 s - in TestSuite
+lippia_1  | [INFO] 
+lippia_1  | [INFO] Results:
+lippia_1  | [INFO] 
+lippia_1  | [INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0
+lippia_1  | [INFO] 
+lippia_1  | [INFO] ------------------------------------------------------------------------
+lippia_1  | [INFO] BUILD SUCCESS
+lippia_1  | [INFO] ------------------------------------------------------------------------
+lippia_1  | [INFO] Total time:  16.357 s
+lippia_1  | [INFO] Finished at: 2020-09-08T17:11:40Z
+lippia_1  | [INFO] ------------------------------------------------------------------------
+lippia-api-sample-project_lippia_1 exited with code 0
 
-TEST STEP FINISHED EN HILO :12
-[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 19.439 s - in TestSuite
-[INFO] 
-[INFO] Results:
-[INFO] 
-[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0
-[INFO] 
-[INFO] ------------------------------------------------------------------------
-[INFO] BUILD SUCCESS
-[INFO] ------------------------------------------------------------------------
-[INFO] Total time:  22.870 s
-[INFO] Finished at: 2019-09-04T12:38:19-03:00
-[INFO] ------------------------------------------------------------------------
 ```
-  
 > This strategy consumes the bonigarcia solution to get the correct Driver to interact with your browser.
 >In this case, Maven will be excute tests phase by using your local browser directly.
-
-To see the result, go to the [report section](#Report) below.
 
 #### Stack strategy
 This strategy use docker containers to generate a context to execute the tests. 
 Through docker compose we configure the following  
 
--	Jenkins  
 -	Selenium hub  
 -  	Browser nodes  
 
-##### Starting stack
-To start the containers, simply run the following command from terminal:
-
-```
-$ sudo docker-compose up --scale chrome=2
-```
-
-
  > This command, will start download the images needed to build all the containers and start them. It takes a while to download the images depending on your internet connection.
 
-![docker-compose](https://bitbucket.org/crowdarautomation/lippia-web-example-project/raw/848727f5bcbd7fd08f5cc3d399a639839f1dcfcc/docs/img/docker-compose-up.png)
-
- >You can change the number of instances to start from chrome by modifying the values of the "scale" parameter
-for example: `-scale chrome=9` (creating 9 chrome instances)
-
-After that you you can check the containers are up and running executing the following command
-`$ sudo docker ps `.
-    You have to see 2 Chrome Browsers, 1 Selenium Grid and 1 Jenkins.
-
-```
-CONTAINER ID        IMAGE                                     COMMAND                  CREATED             STATUS              PORTS                                                                      NAMES
-lippia-web-example-project_chrome_1
-0f69715cd500        selenium/node-chrome:3.141.59-palladium   "/opt/bin/entry_poin…"   6 minutes ago       Up 5 minutes                                       lippia-web-example-project_chrome_2
-29d29f842f47        selenium/node-chrome:3.141.59-palladium   "/opt/bin/entry_poin…"   6 minutes ago       Up 5 minutes                                    
-lippia-web-example-project_chrome_3
-bd442e21a088        selenium/node-chrome:3.141.59-palladium   "/opt/bin/entry_poin…"   6 minutes ago       Up 5 minutes                                                                                   0.0.0.0:4444->4444/tcp                                                     selenium-hub
-b2f7325d2fc5        jenkinsci/blueocean:1.18.0                "/sbin/tini -- /usr/…"   6 minutes ago       Up 6 minutes        0.0.0.0:8080->8080/tcp, 0.0.0.0:8443->8443/tcp, 0.0.0.0:50000->50000/tcp   lippia-web-example-project_jenkins_1
-
-```
-
-## Check Docker stack is up and running
-After starting the stack you can see  and selenium grid following url:
-Jenkins: http://localhost:8080
-
-![jenkins](https://bitbucket.org/crowdarautomation/lippia-web-example-project/raw/848727f5bcbd7fd08f5cc3d399a639839f1dcfcc/docs/img/jenkins.png)
-
-Selenium Grid: http://localhost:4444/grid/console
-
-![grid_console](https://bitbucket.org/crowdarautomation/lippia-web-example-project/raw/848727f5bcbd7fd08f5cc3d399a639839f1dcfcc/docs/img/Grid_Console.png)
-***
-
-### Run from Jenkins with Selenium Grid
-
-Enter Jenkins console http://localhost:8080 with the following credentials  
-
-- Username: **admin**  
-- Password: **secret**
-
-### Build job
-
-![Jenkins_job](https://bitbucket.org/crowdarautomation/lippia-web-example-project/raw/848727f5bcbd7fd08f5cc3d399a639839f1dcfcc/docs/img/jenkins_start_job.png)
-***
-![jenkins build job](https://bitbucket.org/crowdarautomation/lippia-web-example-project/raw/41c0617c8f6d8b7d2254339d96e50e74044ba3c4/docs/img/jenkins_job_build.png)
-
-***
-
-### Reports
-you can view this report by accesing to:
-
-- `[WORKSPACE_LOCATION]/docker/jenkins_home/workspace/nd-volume-needed-for-example-job/target/cucumber-report/example.html`
-> "With each job build the report file will be replaced"
-
-![Lippia Extent Report](https://bitbucket.org/crowdarautomation/lippia-web-example-project/raw/805effb96e514985af2815aa89a1537bb4fe44ba/reporteExtent.png)
+![docker-compose-up](images/docker-compose-up.png)

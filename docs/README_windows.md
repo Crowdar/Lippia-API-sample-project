@@ -2,9 +2,6 @@
 
 ##System Requirements :
 + git client: https://www.atlassian.com/git/tutorials/install-git
-+ JDK 8: https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html   
-	  https://openjdk.java.net/install/   
-+ maven 3.X: https://maven.apache.org/download.cgi   
 + docker 18.09: https://docs.docker.com/install/linux/docker-ce/ubuntu/
 + docker compose 1.24: https://docs.docker.com/compose/install/
 
