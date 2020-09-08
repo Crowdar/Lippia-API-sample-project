@@ -98,6 +98,7 @@ In this example, *ApiExample* is the first endpoint the framework will interact 
 ### Model Object Example
 
 In the model examples you can mapped the expected objects from different api responses. We can show you a little example:
+
 ```
 {
     "data": {
@@ -108,6 +109,7 @@ In the model examples you can mapped the expected objects from different api res
         "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/josephstein/128.jpg"
     }
 }
+
 ```
 So the model class will be something like this: 
 ```
@@ -155,7 +157,7 @@ So the model class will be something like this:
         this.avatar = avatar;
     }
 	}
-```
+
 The idea is have one attribute per field to map on the response
 
 
