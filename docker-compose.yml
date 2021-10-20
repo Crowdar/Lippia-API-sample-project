@@ -7,4 +7,4 @@ services:
        working_dir: /opt/workspace/automation
        environment:
             - WORKSPACE=/opt/workspace/automation
-            - CUSTOM_COMMAND=mvn clean test -PParalelo -Dcucumber.tags=@Success
+            - CUSTOM_COMMAND=mvn clean test -PSecuencial -Dcucumber.tags=@Success

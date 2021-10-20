@@ -3,7 +3,8 @@
     "Content-Type": "application/json"
   },
   "urlParameters": {
-    "id": "2"
+    "id": 2
   }
 }
+
 

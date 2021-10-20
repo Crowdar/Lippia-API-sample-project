@@ -5,14 +5,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Data {
 
     @JsonProperty("data")
-    private User user;
+    private User data;
 
-    public User getUser() {
-        return user;
+    public User getData() {
+        return data;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setData(User data) {
+        this.data = data;
     }
 
 }
