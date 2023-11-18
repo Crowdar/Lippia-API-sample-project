@@ -1,0 +1,198 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<flow-build plugin="workflow-job@2.33">
+  <actions>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UserIdCause>
+            <userId>admin</userId>
+          </hudson.model.Cause_-UserIdCause>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <jenkins.scm.api.SCMRevisionAction plugin="scm-api@2.6.3">
+      <sourceId>blueocean</sourceId>
+      <revision class="jenkins.plugins.git.GitBranchSCMRevision" plugin="git@3.12.0">
+        <head class="jenkins.plugins.git.GitBranchSCMHead">
+          <name>master</name>
+        </head>
+        <hash>eda8875f3eb04d1bd4d992f585ca5f96307b1f72</hash>
+      </revision>
+    </jenkins.scm.api.SCMRevisionAction>
+    <org.jenkinsci.plugins.workflow.libs.LibrariesAction plugin="workflow-cps-global-lib@2.15">
+      <libraries/>
+    </org.jenkinsci.plugins.workflow.libs.LibrariesAction>
+    <org.jenkinsci.plugins.pipeline.modeldefinition.actions.ExecutionModelAction plugin="pipeline-model-definition@1.3.9">
+      <stagesUUID>92f6fea9-d34f-4180-902c-c311d71577a2</stagesUUID>
+      <stagesList>
+        <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStages plugin="pipeline-model-api@1.3.9">
+          <stages>
+            <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+              <name>Build</name>
+              <branches>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                  <name>default</name>
+                  <steps>
+                    <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                      <name>sh</name>
+                      <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                        <arguments class="linked-hash-map">
+                          <entry>
+                            <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <key>script</key>
+                            </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                            <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                              <value class="string">mvn clean -P Secuencial test</value>
+                            </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                          </entry>
+                        </arguments>
+                      </args>
+                    </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                  </steps>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+              </branches>
+            </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+          </stages>
+          <uuid>92f6fea9-d34f-4180-902c-c311d71577a2</uuid>
+        </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStages>
+      </stagesList>
+    </org.jenkinsci.plugins.pipeline.modeldefinition.actions.ExecutionModelAction>
+    <hudson.plugins.git.util.BuildData plugin="git@3.12.0">
+      <buildsByBranchName>
+        <entry>
+          <string>master</string>
+          <hudson.plugins.git.util.Build>
+            <marked plugin="git-client@2.8.0">
+              <sha1>eda8875f3eb04d1bd4d992f585ca5f96307b1f72</sha1>
+              <branches class="singleton-set">
+                <hudson.plugins.git.Branch>
+                  <sha1 reference="../../../sha1"/>
+                  <name>master</name>
+                </hudson.plugins.git.Branch>
+              </branches>
+            </marked>
+            <revision reference="../marked"/>
+            <hudsonBuildNumber>2</hudsonBuildNumber>
+          </hudson.plugins.git.util.Build>
+        </entry>
+      </buildsByBranchName>
+      <lastBuild reference="../buildsByBranchName/entry/hudson.plugins.git.util.Build"/>
+      <remoteUrls>
+        <string>git@bitbucket.org:crowdarautomation/lippia-api-example-project.git</string>
+      </remoteUrls>
+    </hudson.plugins.git.util.BuildData>
+    <hudson.plugins.git.GitTagAction plugin="git@3.12.0">
+      <tags class="hudson.util.CopyOnWriteMap$Tree">
+        <entry>
+          <string>master</string>
+          <list/>
+        </entry>
+      </tags>
+      <ws>/var/jenkins_home/workspace/ippia-api-example-project_master</ws>
+    </hudson.plugins.git.GitTagAction>
+    <org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState plugin="workflow-scm-step@2.9">
+      <revisionStates>
+        <entry>
+          <string>git git@bitbucket.org:crowdarautomation/lippia-api-example-project.git</string>
+          <hudson.scm.SCMRevisionState_-None/>
+        </entry>
+      </revisionStates>
+    </org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState>
+    <com.cloudbees.jenkins.plugins.bitbucket.FirstCheckoutCompletedInvisibleAction plugin="cloudbees-bitbucket-branch-source@2.4.5"/>
+  </actions>
+  <queueId>4</queueId>
+  <timestamp>1567442094150</timestamp>
+  <startTime>1567442094166</startTime>
+  <result>FAILURE</result>
+  <duration>39206</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <execution class="org.jenkinsci.plugins.workflow.cps.CpsFlowExecution">
+    <result>FAILURE</result>
+    <script>pipeline {
+  agent any
+  tools {
+    maven &apos;maven-3&apos;
+  }
+  stages {
+    stage(&apos;Build&apos;) {
+      steps {
+        sh &apos;mvn clean -P Secuencial test&apos;
+      }
+    }
+  }
+}</script>
+    <loadedScripts class="map"/>
+    <durabilityHint>MAX_SURVIVABILITY</durabilityHint>
+    <timings class="map">
+      <entry>
+        <string>flowNode</string>
+        <long>481447956</long>
+      </entry>
+      <entry>
+        <string>classLoad</string>
+        <long>7981761637</long>
+      </entry>
+      <entry>
+        <string>run</string>
+        <long>6364989003</long>
+      </entry>
+      <entry>
+        <string>parse</string>
+        <long>1309603802</long>
+      </entry>
+      <entry>
+        <string>saveProgram</string>
+        <long>801227129</long>
+      </entry>
+    </timings>
+    <sandbox>true</sandbox>
+    <iota>37</iota>
+    <head>1:37</head>
+    <done>true</done>
+    <resumeBlocked>false</resumeBlocked>
+  </execution>
+  <completed>true</completed>
+  <checkouts class="hudson.util.PersistedList">
+    <org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>
+      <scm class="hudson.plugins.git.GitSCM" plugin="git@3.12.0">
+        <configVersion>2</configVersion>
+        <userRemoteConfigs>
+          <hudson.plugins.git.UserRemoteConfig>
+            <name>origin</name>
+            <refspec>+refs/heads/*:refs/remotes/origin/*</refspec>
+            <url>git@bitbucket.org:crowdarautomation/lippia-api-example-project.git</url>
+            <credentialsId>jenkins-generated-ssh-key</credentialsId>
+          </hudson.plugins.git.UserRemoteConfig>
+        </userRemoteConfigs>
+        <branches class="singleton-list">
+          <hudson.plugins.git.BranchSpec>
+            <name>master</name>
+          </hudson.plugins.git.BranchSpec>
+        </branches>
+        <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+        <submoduleCfg class="empty-list"/>
+        <extensions>
+          <hudson.plugins.git.extensions.impl.CleanBeforeCheckout/>
+          <hudson.plugins.git.extensions.impl.CleanCheckout/>
+          <hudson.plugins.git.extensions.impl.LocalBranch>
+            <localBranch>**</localBranch>
+          </hudson.plugins.git.extensions.impl.LocalBranch>
+          <jenkins.plugins.git.GitSCMSourceDefaults>
+            <includeTags>false</includeTags>
+          </jenkins.plugins.git.GitSCMSourceDefaults>
+          <hudson.plugins.git.extensions.impl.BuildChooserSetting>
+            <buildChooser class="jenkins.plugins.git.AbstractGitSCMSource$SpecificRevisionBuildChooser">
+              <revision reference="../../../../../../../actions/hudson.plugins.git.util.BuildData/buildsByBranchName/entry/hudson.plugins.git.util.Build/marked"/>
+            </buildChooser>
+          </hudson.plugins.git.extensions.impl.BuildChooserSetting>
+        </extensions>
+      </scm>
+      <node></node>
+      <workspace>/var/jenkins_home/workspace/ippia-api-example-project_master</workspace>
+      <changelogFile>/var/jenkins_home/jobs/lippia-api-example-project/branches/master/builds/2/changelog6168804410684211805.xml</changelogFile>
+      <pollingBaseline class="hudson.scm.SCMRevisionState$None" reference="../../../actions/org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState/revisionStates/entry/hudson.scm.SCMRevisionState_-None"/>
+    </org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>
+  </checkouts>
+</flow-build>

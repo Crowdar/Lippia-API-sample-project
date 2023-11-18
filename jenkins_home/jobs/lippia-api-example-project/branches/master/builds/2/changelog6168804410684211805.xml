@@ -1,0 +1,11 @@
+commit eda8875f3eb04d1bd4d992f585ca5f96307b1f72
+tree e8f3eaafb60ce16c5eda976e7e10747ece1bd278
+parent 288ea73b28f961917e866207309f597603977893
+author Juan Manuel Carames <juan.carames@crowdaronline.com> 2019-09-02 16:29:05 +0000
+committer Juan Manuel Carames <juan.carames@crowdaronline.com> 2019-09-02 16:29:05 +0000
+
+    pom.xml edited online with Bitbucket
+
+
+
+:100644 100644 ee20af3f0a924beebcafa23cc99dd6d031c350a0 2460f8861be248c764550c890b8a1d238ac0b6da M	pom.xml

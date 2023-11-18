@@ -1,0 +1,13 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2019-09-02 15:35:37.557 UTC</timestamp>
+  <md5sum>bcde03361ccf8e72dfb45bd71e66957e</md5sum>
+  <fileName>Credential id=jenkins-generated-ssh-key name=admin (jenkins-generated-ssh-key)</fileName>
+  <usages>
+    <entry>
+      <string>lippia-api-example-project/master</string>
+      <ranges>1-9</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

@@ -17,12 +17,13 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <base.api.url>https://reqres.in/api/users</base.api.url>
+        <!--base.api.url>https://reqres.in/api/users</base.api.url-->
+        <base.api.url>https://api.clockify.me/api</base.api.url>
         <cucumber.stepsDefinitions>--glue ar/steps --glue com/crowdar/api/rest</cucumber.stepsDefinitions>
         <cucumber.hooks>--glue com/crowdar/bdd/cukes --glue ar/apiExampleProject/hook</cucumber.hooks>
-		<cucumber.tags>@Success</cucumber.tags>
+        <cucumber.tags>@Clockify</cucumber.tags>
         <crowdar.cucumber.plugins>--plugin pretty --plugin api.report.CucumberReporter:</crowdar.cucumber.plugins>
-		<crowdar.cucumber.option>src/test/resources/features ${cucumber.hooks} ${cucumber.stepsDefinitions} --tags 'not @Ignore' --tags ${cucumber.tags} ${crowdar.cucumber.plugins}</crowdar.cucumber.option>
+        <crowdar.cucumber.option>src/test/resources/features ${cucumber.hooks} ${cucumber.stepsDefinitions} --tags 'not @Ignore' --tags ${cucumber.tags} ${crowdar.cucumber.plugins}</crowdar.cucumber.option>
         <crowdar.projectType>API</crowdar.projectType>
 
     </properties>
@@ -30,6 +31,7 @@
         <profile>
             <id>Secuencial</id>
             <activation>
+                <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
                 <apiExample.runner>testng.xml</apiExample.runner>
@@ -38,7 +40,6 @@
         <profile>
             <id>Paralelo</id>
             <activation>
-            	<activeByDefault>true</activeByDefault>
             </activation>
             <properties>
                 <apiExample.runner>testngParalell.xml</apiExample.runner>
@@ -47,9 +48,9 @@
     </profiles>
     <dependencies>
         <dependency>
-	        <groupId>io.lippia</groupId>
-	        <artifactId>core</artifactId>
-	        <version>3.2.3.8</version>
+            <groupId>io.lippia</groupId>
+            <artifactId>core</artifactId>
+            <version>3.2.3.8</version>
         </dependency>
         <dependency>
             <groupId>io.lippia.report</groupId>
@@ -61,6 +62,17 @@
             <artifactId>extentreports-cucumber4-adapter</artifactId>
             <version>1.1.0.10</version>
         </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.22</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.xbean</groupId>
+            <artifactId>xbean-reflect</artifactId>
+            <version>3.7</version>
+        </dependency>
     </dependencies>
     <build>
         <filters>
@@ -68,29 +80,29 @@
         </filters>
         <plugins>
             <plugin>
-               <groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>3.0.0-M4</version>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M4</version>
                 <configuration>
                     <suiteXmlFiles>
                         <suiteXmlFile>${apiExample.runner}</suiteXmlFile>
                     </suiteXmlFiles>
                     <systemPropertyVariables>
-						<LIPPIA_RS_API_HOST>https://rsapi.automation.crowdaronline.com</LIPPIA_RS_API_HOST>
-	                    <LIPPIA_RS_PROJECT_NAME>API Sample</LIPPIA_RS_PROJECT_NAME>
-	                    <LIPPIA_RS_REPORT_NAME>Local - build</LIPPIA_RS_REPORT_NAME>
-                	</systemPropertyVariables>
+                        <LIPPIA_RS_API_HOST>https://rsapi.automation.crowdaronline.com</LIPPIA_RS_API_HOST>
+                        <LIPPIA_RS_PROJECT_NAME>API Sample</LIPPIA_RS_PROJECT_NAME>
+                        <LIPPIA_RS_REPORT_NAME>Local - build</LIPPIA_RS_REPORT_NAME>
+                    </systemPropertyVariables>
                 </configuration>
             </plugin>
         </plugins>
     </build>
     <repositories>
-		<repository>
-			<id>crowdarRepo</id>
-			<name>crowdar-repository</name>
-			<url>https://nexus-v3-repositories.automation.crowdaronline.com/repository/maven-public/</url>
-		</repository>
-	</repositories>
-    
+        <repository>
+            <id>crowdarRepo</id>
+            <name>crowdar-repository</name>
+            <url>https://nexus-v3-repositories.automation.crowdaronline.com/repository/maven-public/</url>
+        </repository>
+    </repositories>
+
 
 </project>
