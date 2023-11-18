@@ -1,0 +1,113 @@
+Started by user [8mha:////4JA9v5tUzlTDtGOPJBEIYYw13/8/48+N2KXiX3lP80O/AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+ > git rev-parse --is-inside-work-tree # timeout=10
+Setting origin to git@bitbucket.org:crowdarautomation/lippia-api-example-project.git
+ > git config remote.origin.url git@bitbucket.org:crowdarautomation/lippia-api-example-project.git # timeout=10
+Fetching origin...
+Fetching upstream changes from origin
+ > git --version # timeout=10
+ > git config --get remote.origin.url # timeout=10
+using GIT_SSH to set credentials jenkins-generated-ssh-key
+ > git fetch --tags --force --progress origin +refs/heads/*:refs/remotes/origin/*
+Seen branch in repository origin/Guillermo-Aguirre/readmemd-edited-online-with-bitbucket-1564705696111
+Seen branch in repository origin/entityConfiguration
+Seen branch in repository origin/master
+Seen 3 remote branches
+Obtained Jenkinsfile from 15e80abe1cd621b912c7ff7aaa85e46e49eb4e9d
+Running in Durability level: MAX_SURVIVABILITY
+[8mha:////4EpFwZMblgPsvyuGKahQ1L+j05K4tCKNbiHHZH0UNZxoAAAAoh+LCAAAAAAAAP9tjTEOwjAQBM8BClpKHuFItIiK1krDC0x8GCfWnbEdkooX8TX+gCESFVvtrLSa5wtWKcKBo5UdUu8otU4GP9jS5Mixv3geZcdn2TIl9igbHBs2eJyx4YwwR1SwULBGaj0nRzbDRnX6rmuvydanHMu2V1A5c4MHCFXMWcf8hSnC9jqYxPTz/BXAFEIGsfuclm8zQVqFvQAAAA==[0m[Pipeline] Start of Pipeline
+[8mha:////4JbFIovlyT+ZyXlfN0Sge4M2zB+J8Zu8WqfqcDkWFDDTAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycohUghExsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jduZBmjwAAAAA==[0m[Pipeline] node
+Running on [8mha:////4L6hoUIbWOHwlkY93tw6rrqwebps19DdkUlnlOjiPx+jAAAAnh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAz2EgZh/eT83ILSktQifY3cxGIgrakPAHib2iPIAAAA[0mJenkins in /var/jenkins_home/workspace/ippia-api-example-project_master
+[8mha:////4An/JK7ttUJB8PL7SrZO8V4y9FGdNSKGJMNcKFpoxhxuAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0gA0xsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jfoP95RwAAAAA==[0m[Pipeline] {
+[8mha:////4Hb+IsHl99PpL00yKBYZ/cELdpsxcvFOImrNjM3ayltcAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0gQkxsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jc09154wAAAAA==[0m[Pipeline] stage
+[8mha:////4DYcSpHJuJSnGcW1Hw7C/AY+emmR7paW70jmzBKKpBVbAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0ggUxsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jek7ggRwAAAAA==[0m[Pipeline] { (Declarative: Checkout SCM)
+[8mha:////4KpON2s1z0FcGBMZuC7x6NsOn5Y94IfM+IuW/hH0Q3MTAAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQTbaWGsbAmNJ0AWEZb8zwLrbuWJvJp3kLiJlZNMMm+a93rDOic4UbLcG+wdZu14DKOti0+U+lugiXu6ck2YKRguzSSpM+cFJRUDS1gDKwEbgzpQdmgLbIVXD9UGhba9lFS/o4DGdQM8gYlqLiqVL8wJdvexy4Q/z18BzLEA29ce4gfg7KmOvAAAAA==[0m[Pipeline] checkout
+using credential jenkins-generated-ssh-key
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url git@bitbucket.org:crowdarautomation/lippia-api-example-project.git # timeout=10
+Cleaning workspace
+ > git rev-parse --verify HEAD # timeout=10
+Resetting working tree
+ > git reset --hard # timeout=10
+ > git clean -fdx # timeout=10
+Fetching without tags
+Fetching upstream changes from git@bitbucket.org:crowdarautomation/lippia-api-example-project.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials jenkins-generated-ssh-key
+ > git fetch --no-tags --force --progress git@bitbucket.org:crowdarautomation/lippia-api-example-project.git +refs/heads/*:refs/remotes/origin/*
+Checking out Revision 15e80abe1cd621b912c7ff7aaa85e46e49eb4e9d (master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 15e80abe1cd621b912c7ff7aaa85e46e49eb4e9d
+ > git branch -a -v --no-abbrev # timeout=10
+ > git branch -D master # timeout=10
+ > git checkout -b master 15e80abe1cd621b912c7ff7aaa85e46e49eb4e9d
+Commit message: "pom root 1.6.1"
+ > git rev-list --no-walk 15e80abe1cd621b912c7ff7aaa85e46e49eb4e9d # timeout=10
+Cleaning workspace
+ > git rev-parse --verify HEAD # timeout=10
+Resetting working tree
+ > git reset --hard # timeout=10
+ > git clean -fdx # timeout=10
+[8mha:////4O3nADGHs23/Kl3D4Vem/YK++A7mSIgOy37UayO0/AUVAAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQTbGRNjZUtoPAGyiLDkfxZYdytP5NW8g8RNrJxkknnTvNcb1jnBiZLl3mDvMGvHYxhtXXyi1N8CTdzTlWvCTMFwaSZJnTkvKKkYWMIaWAnYGNSBskNbYCu8eqg2KLTtpaT6HQU0rhvgCUxUc1GpfGFOsLuPXSb8ef4KYI6xADvU7j9Dg2gqvAAAAA==[0m[Pipeline] }
+[8mha:////4O9w4ghdmRfJF0B7+f9fc/xQtiMOEbP+6UqMSgc5gMJ4AAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQRbWRhjZUtoPAGyiLDkfxZYdytP5NW8g8RNrJxkknnTvNcb1jnBiZLl3mDvMGvHYxhtXXyi1N8CTdzTlWvCTMFwaSZJnTkvKKkYWMIaWAnYGNSBskNbYCu8eqg2KLTtpaT6HQU0rhvgCUxUc1GpfGFOsLuPXSb8ef4KYI6xADvU7j9J+wGOvAAAAA==[0m[Pipeline] // stage
+[8mha:////4NHa52FzR5XLRVgw0jzEUH2u5K3XlMUkICfTRX8gsn2sAAAAph+LCAAAAAAAAP9tjTEOwjAQBM9BKWgpeYQDEh2iorXc8AITG+PEugv2haTiRXyNPxCIRMVWOyut5vmCMic4UPKycdgGzHWQXez91ORAqb1EGmRDZ1kTZopOajdosu44oyZ2MEcUsFCwdFhHygE9w0o15m6qaNBXJ07TtldQBHuDBwg1mdkk/sKYYH3tbSb8ef4KYOwYxI6h2G4+x/INtuQqUcEAAAA=[0m[Pipeline] withEnv
+[8mha:////4IkdELn3H+ehOu0IBl7G5ln2lrzrxMUhcHI+zdjztI7fAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+DOrAycoiUzoiJNerCCUITQtLo/zZJSSdOxNW4Ay2VmPBg2Zas93pDGQOcKBjuNHYWY2t570czJ54pdDdPmTu68pYwkte80bkhpc9rbShpWFUw2AjYamw9RYsmwU44+ZCVl2iqSwrzdhTArBrgCYWYyUmG9C1TgP19VJHwx/kLgKlPwOrDYvXyLD8BobDcwgAAAA==[0m[Pipeline] {
+[8mha:////4GI1mBjlATcQtxCtJOjVUpQQFPVKbS2eVJPyCSQFCIEdAAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUZUVMrFEWThCaEJJG/7dJSjpxIq7GHWipxIQHy7ZkvdcbqhjgRMEwp7GzGFvLej+aObFMobt5yszRlbWEkbxmQmdBSp/XKihpWFWUsOGw1dh6ihZNgh138iFrL9HUlxTm7cihtGqAJxR8JicZ0rdMAfb3UUXCH+cvAKY+Qdk0ix2WZ/UBbwyqm8IAAAA=[0m[Pipeline] stage
+[8mha:////4GhVvIM1JlLTvuNaoqX3JUu1eUxdkq7zCPFeBl7eilMAAAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUwIiYukZZOEFoQkgb/V9+UtqJE3E17kBLJSY8WLYl673eUESGE7ETjcXWY6y96ELvpiQG4vYaaBANXURNGClYoeygyNhqqYqShUVZDisJa4t1oOjRJdjIRj90GTS68px42o4Scm/u8IRMTuSkOX3LyLC99SYS/jh/ATB2CfLdfrbD/Cw+y7kUycIAAAA=[0m[Pipeline] { (Declarative: Tool Install)
+[8mha:////4N7iDLg+L+l04wzSBEBItgpacbjdMyr9uDK6adVTVzMfAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiBB2iSmu54QUmNsaJdWdsh6TiRXyNPxCIRMUWq51t5vmCZYpw5GixNdQ5So3D4Hs7LRw4dhfPA7Z8xoYpsTcozSBZm3pGydnAnKKEhYCVocZzcmQzrEWr7qryimx1ynH6DgJKp2/wgEJM5qxi/sIYYXPtdWL6ef4KYAwZyu3uU/vwBgq0rvS+AAAA[0m[Pipeline] tool
+[8mha:////4A4kctZvlpyPbu8PpKcK53GTpXd+QYGaA12bwdhGc7acAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIihKgQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGPIUG53n9qHN0uFte2+AAAA[0m[Pipeline] envVarsForTool
+[8mha:////4FCAN4aPqIvvtZZIeGn7Ykc6SL/F/dR5JapSvxImrwTzAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIihESDqNJabniBiY1xYt0Z2yGpeBFf4w8EIlGxxWpnm3m+YJkiHDlabA11jlLjMPjeTgsHjt3F84Atn7FhSuwNSjNI1qaeUXI2MKcoYSFgZajxnBzZDGvRqruqvCJbnXKcvoOA0ukbPKAQkzmrmL8wRthce52Yfp6/AhhDyFBu95/avQEeFbpZvgAAAA==[0m[Pipeline] }
+[8mha:////4NMmpVp8HvnfaGCk6ooRIduGb6/F3kmPOI5bcU9Imnm6AAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiaCgQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGMIGcrt/lO7Ny324eW+AAAA[0m[Pipeline] // stage
+[8mha:////4FMSGU596ro4O24GdH6I5fZjkbdkZzf3fBSvaGAzivhMAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohU3ZAQE2uUhROEJoSk0f9tkpJOnIircQdaKjHhwbItWe/1hioGOFEwzGnsLMbWst6PZk4sU+hunjJzdGUtYSSvmdBZkNLntQpKGlYVJWw4bDW2nqJFk2DHnXzI2ks09SWFeTtyKK0a4AkFn8lJhvQtU4D9fVSR8Mf5C4CpT1A2zWKH5Vl9AAkvMTrCAAAA[0m[Pipeline] withEnv
+[8mha:////4E1XdtaCR43qNgMlgJL1bmyI27EO1NcI7KM3IbkVBkLRAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUbCDE1DXKwglCE0La6P/yk9JOnIircQdaKjHhwbItWe/1hiIynIidaCy2HmPtRRd6NyUxELfXQINo6CJqwkjBCmUHRcZWS1WULCzKclhJWFusA0WPLsFGNvqhy6DRlefE03aUkHtzhydkciInzelbRobtrTeR8Mf5C4CxS5Dv9rMd5mfxASnCIIrCAAAA[0m[Pipeline] {
+[8mha:////4FTkvBZdz+VVctGk/lmfY6n1DBzM9LJMslccd0Cf5rnnAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycogU2BDqxBp14QShCSFp9H9JUtKJE3E17kCgEhMeLNuS9Z4vqIKHhrxmVmFvMHSGDW7UObFEvr84SszSmXWEgZxirUotSXWca0tRwayihAWHpcLOUTCoI6y4FXdRO4G6PkWftwOH0sgbPKDgmRyFj98yeVhfRxkIf5y/AJiGCOV2n223+TyrN7xWSV3CAAAA[0m[Pipeline] stage
+[8mha:////4JJz08kWJ32WWwEjs4hmPl/36Hh5F303HFm8qYF7fYt1AAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycogUWBFT1ygLJwhNCGmj/8tPSjtxIq7GHWipxIQHy7ZkvdcbishwInaisdh6jLUXXejdlMRA3F4DDaKhi6gJIwUrlB0UGVstVVGysCjLYSVhbbEOFD26BBvZ6Icug0ZXnhNP21FC7s0dnpDJiZw0p28ZGba33kTCH+cvAMYuQX7Yzbafn8UHbGnGmsIAAAA=[0m[Pipeline] { (Build)
+[8mha:////4FzlFxP9CTAScCeVOCE5BujDXjtbH+ad5Vu7eQFyM8WMAAAAox+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIi0iIqWisNLzCJMXasO8d2cCpexNf4A4FIVGyx2tlmni9YxwBHDhqtot5QbA16N+p5YebQXx1ntHzBlimyU9io3HCnTgs2nBQsKUpYCdgoah1HQzrBVlh5l5WTpKtzCvN3EFCaboAHFGI2JxnSF6YAu9vYRaaf568AJp+grPefqv0bH7uiub4AAAA=[0m[Pipeline] tool
+[8mha:////4ANkmrmjrhRpjki5goiDEzIwF1rNggEJ/phokjkuQtd7AAAAox+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIioERUaS03vMDExjix7oztkFS8iK/xBwKRqNhitbPNPF+wTBGOHC22hjpHqXEYfG+nhQPH7uJ5wJbP2DAl9galGSRrU88oORuYU5SwELAy1HhOjmyGtWjVXVVeka1OOU7fQUDp9A0eUIjJnFXMXxgjbK69Tkw/z18BjCFDudt+ah/eXoq5oL4AAAA=[0m[Pipeline] envVarsForTool
+[8mha:////4GdaAMi5ShIS//mIEX+Xl6knOIy/SGJae7L7r4zOY7IlAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUIDbE1DXKwglCE0La6P/yk9JOnIircQdaKjHhwbItWe/1hiIynIidaCy2HmPtRRd6NyUxELfXQINo6CJqwkjBCmUHRcZWS1WULCzKclhJWFusA0WPLsFGNvqhy6DRlefE03aUkHtzhydkciInzelbRobtrTeR8Mf5C4CxS5Dvd7Md5mfxAR8nhQvCAAAA[0m[Pipeline] withEnv
+[8mha:////4Ne3beDKL8J2X+bJm03TPdjVzp+GFdCnvjAT9J7myRHlAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUQjAhpq5RFk4QmhDSRv+Xn5R24kRcjTvQUokJD5ZtyXqvNxSR4UTsRGOx9RhrL7rQuymJgbi9BhpEQxdRE0YKVig7KDK2WqqiZGFRlsNKwtpiHSh6dAk2stEPXQaNrjwnnrajhNybOzwhkxM5aU7fMjJsb72JhD/OXwCMXYJ8t5/tMD+LD/hYjrHCAAAA[0m[Pipeline] {
+[8mha:////4CxVkqej/NSBqll1Ae4co3t4WJ2udUBkqfNOoO3sLwP7AAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiIUGDqNJabniBiY1xYt0Z2yGpeBFf4w8EIlGxxWpnm3m+YJkiHDlabA11jlLjMPjeTgsHjt3F84Atn7FhSuwNSjNI1qaeUXI2MKcoYSFgZajxnBzZDGvRqruqvCJbnXKcvoOA0ukbPKAQkzmrmL8wRthce52Yfp6/AhhDhnK7+9Q+vAEIWoEpvgAAAA==[0m[Pipeline] sh
++ mvn clean -P Secuencial test
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.Crowdar:lippia-api-example-project:jar:1.0-SNAPSHOT
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.fasterxml.jackson.core:jackson-databind:jar -> version 2.9.3 vs 2.9.5 @ com.crowdar:Crowd-Root-Framework:1.6.1, /var/jenkins_home/.m2/repository/com/crowdar/Crowd-Root-Framework/1.6.1/Crowd-Root-Framework-1.6.1.pom, line 356, column 25
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------< com.Crowdar:lippia-api-example-project >---------------
+[INFO] Building api-rest-automation 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+Downloading from crowdarRepo: http://nexus-v3-repositories.automation.crowdaronline.com/repository/maven-public/com/atlassian/jira/jira-rest-java-client-core/5.0.4/jira-rest-java-client-core-5.0.4.pom
+Progress (1): 382 B                   Downloaded from crowdarRepo: http://nexus-v3-repositories.automation.crowdaronline.com/repository/maven-public/com/atlassian/jira/jira-rest-java-client-core/5.0.4/jira-rest-java-client-core-5.0.4.pom (382 B at 125 B/s)
+Downloading from crowdarRepo: http://nexus-v3-repositories.automation.crowdaronline.com/repository/maven-public/com/atlassian/fugue/fugue/2.7.0/fugue-2.7.0.pom
+Progress (1): 362 B                   Downloaded from crowdarRepo: http://nexus-v3-repositories.automation.crowdaronline.com/repository/maven-public/com/atlassian/fugue/fugue/2.7.0/fugue-2.7.0.pom (362 B at 365 B/s)
+Downloading from crowdarRepo: http://nexus-v3-repositories.automation.crowdaronline.com/repository/maven-public/com/atlassian/connect/ac-play-java_2.10/0.10.1/ac-play-java_2.10-0.10.1.pom
+Progress (1): 377 B                   Downloaded from crowdarRepo: http://nexus-v3-repositories.automation.crowdaronline.com/repository/maven-public/com/atlassian/connect/ac-play-java_2.10/0.10.1/ac-play-java_2.10-0.10.1.pom (377 B at 372 B/s)
+Downloading from central: https://repo.maven.apache.org/maven2/io/grpc/grpc-core/maven-metadata.xml
+Downloading from atlassian-public: https://maven.atlassian.com/repository/public/io/grpc/grpc-core/maven-metadata.xml
+Downloading from crowdarRepo: http://nexus-v3-repositories.automation.crowdaronline.com/repository/maven-public/io/grpc/grpc-core/maven-metadata.xml
+Progress (1): 2.1 kBProgress (2): 2.1 kB | 2.1 kB                             Downloaded from crowdarRepo: http://nexus-v3-repositories.automation.crowdaronline.com/repository/maven-public/io/grpc/grpc-core/maven-metadata.xml (2.1 kB at 2.7 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/io/grpc/grpc-core/maven-metadata.xml (2.1 kB at 2.6 kB/s)
+Progress (1): 2.6 kB                    Downloaded from atlassian-public: https://maven.atlassian.com/repository/public/io/grpc/grpc-core/maven-metadata.xml (2.6 kB at 1.0 kB/s)
+Downloading from crowdarRepo: http://nexus-v3-repositories.automation.crowdaronline.com/repository/maven-public/io/netty/netty-codec-http2/maven-metadata.xml
+Downloading from atlassian-public: https://maven.atlassian.com/repository/public/io/netty/netty-codec-http2/maven-metadata.xml
+Downloading from central: https://repo.maven.apache.org/maven2/io/netty/netty-codec-http2/maven-metadata.xml
+Progress (1): 2.2/2.3 kBProgress (1): 2.3 kB    Progress (2): 2.3 kB | 2.3 kB                             Downloaded from central: https://repo.maven.apache.org/maven2/io/netty/netty-codec-http2/maven-metadata.xml (2.3 kB at 4.8 kB/s)
+Progress (2): 2.3 kB | 3.8 kB                             Downloaded from crowdarRepo: http://nexus-v3-repositories.automation.crowdaronline.com/repository/maven-public/io/netty/netty-codec-http2/maven-metadata.xml (2.3 kB at 2.7 kB/s)
+Downloaded from atlassian-public: https://maven.atlassian.com/repository/public/io/netty/netty-codec-http2/maven-metadata.xml (3.8 kB at 3.5 kB/s)
+Downloading from atlassian-public: https://maven.atlassian.com/repository/public/com/firebase/firebase-client-android/maven-metadata.xml
+Downloading from crowdarRepo: http://nexus-v3-repositories.automation.crowdaronline.com/repository/maven-public/com/firebase/firebase-client-android/maven-metadata.xml
+Downloading from central: https://repo.maven.apache.org/maven2/com/firebase/firebase-client-android/maven-metadata.xml
+Progress (1): 1.1 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/com/firebase/firebase-client-android/maven-metadata.xml (1.1 kB at 3.0 kB/s)
+Progress (1): 1.1 kBProgress (2): 1.1 kB | 1.1 kB                             Downloaded from crowdarRepo: http://nexus-v3-repositories.automation.crowdaronline.com/repository/maven-public/com/firebase/firebase-client-android/maven-metadata.xml (1.1 kB at 1.3 kB/s)
+Downloaded from atlassian-public: https://maven.atlassian.com/repository/public/com/firebase/firebase-client-android/maven-metadata.xml (1.1 kB at 979 B/s)
+Downloading from crowdarRepo: http://nexus-v3-repositories.automation.crowdaronline.com/repository/maven-public/com/atlassian/jira/jira-rest-java-client-core/5.0.4/jira-rest-java-client-core-5.0.4.jar
+Downloading from crowdarRepo: http://nexus-v3-repositories.automation.crowdaronline.com/repository/maven-public/com/atlassian/fugue/fugue/2.7.0/fugue-2.7.0.jar
+Downloading from crowdarRepo: http://nexus-v3-repositories.automation.crowdaronline.com/repository/maven-public/com/atlassian/connect/ac-play-java_2.10/0.10.1/ac-play-java_2.10-0.10.1.jar
+Progress (1): 4.1/191 kBProgress (1): 7.8/191 kBProgress (1): 12/191 kB Progress (1): 16/191 kBProgress (1): 20/191 kBProgress (1): 24/191 kBProgress (1): 28/191 kBProgress (1): 32/191 kBProgress (1): 36/191 kBProgress (1): 41/191 kBProgress (1): 45/191 kBProgress (1): 49/191 kBProgress (1): 53/191 kBProgress (1): 57/191 kBProgress (1): 61/191 kBProgress (1): 65/191 kBProgress (1): 69/191 kBProgress (1): 73/191 kBProgress (1): 77/191 kBProgress (1): 80/191 kBProgress (1): 84/191 kBProgress (1): 88/191 kBProgress (1): 92/191 kBProgress (1): 96/191 kBProgress (1): 100/191 kBProgress (1): 104/191 kBProgress (1): 109/191 kBProgress (1): 113/191 kBProgress (1): 117/191 kBProgress (1): 121/191 kBProgress (1): 125/191 kBProgress (1): 129/191 kBProgress (1): 133/191 kBProgress (1): 137/191 kBProgress (1): 141/191 kBProgress (1): 145/191 kBProgress (1): 149/191 kBProgress (1): 153/191 kBProgress (1): 157/191 kBProgress (1): 162/191 kBProgress (1): 166/191 kBProgress (1): 169/191 kBProgress (1): 173/191 kBProgress (1): 177/191 kBProgress (1): 181/191 kBProgress (1): 185/191 kBProgress (1): 189/191 kBProgress (1): 191 kB                        Downloaded from crowdarRepo: http://nexus-v3-repositories.automation.crowdaronline.com/repository/maven-public/com/atlassian/jira/jira-rest-java-client-core/5.0.4/jira-rest-java-client-core-5.0.4.jar (191 kB at 108 kB/s)
+Progress (1): 4.1/357 kBProgress (2): 4.1/357 kB | 4.1/117 kBProgress (2): 7.8/357 kB | 4.1/117 kBProgress (2): 7.8/357 kB | 7.8/117 kBProgress (2): 12/357 kB | 7.8/117 kB Progress (2): 12/357 kB | 12/117 kB Progress (2): 16/357 kB | 12/117 kBProgress (2): 16/357 kB | 16/117 kBProgress (2): 16/357 kB | 20/117 kBProgress (2): 16/357 kB | 24/117 kBProgress (2): 16/357 kB | 26/117 kBProgress (2): 20/357 kB | 26/117 kBProgress (2): 24/357 kB | 26/117 kBProgress (2): 26/357 kB | 26/117 kBProgress (2): 30/357 kB | 26/117 kBProgress (2): 30/357 kB | 30/117 kBProgress (2): 34/357 kB | 30/117 kBProgress (2): 34/357 kB | 34/117 kBProgress (2): 39/357 kB | 34/117 kBProgress (2): 39/357 kB | 39/117 kBProgress (2): 43/357 kB | 39/117 kBProgress (2): 43/357 kB | 43/117 kBProgress (2): 43/357 kB | 47/117 kBProgress (2): 43/357 kB | 51/117 kBProgress (2): 43/357 kB | 55/117 kBProgress (2): 47/357 kB | 55/117 kBProgress (2): 47/357 kB | 59/117 kBProgress (2): 51/357 kB | 59/117 kBProgress (2): 55/357 kB | 59/117 kBProgress (2): 59/357 kB | 59/117 kBProgress (2): 59/357 kB | 63/117 kBProgress (2): 63/357 kB | 63/117 kBProgress (2): 63/357 kB | 67/117 kBProgress (2): 67/357 kB | 67/117 kBProgress (2): 67/357 kB | 71/117 kBProgress (2): 67/357 kB | 75/117 kBProgress (2): 71/357 kB | 75/117 kBProgress (2): 75/357 kB | 75/117 kBProgress (2): 75/357 kB | 80/117 kBProgress (2): 75/357 kB | 84/117 kBProgress (2): 75/357 kB | 88/117 kBProgress (2): 80/357 kB | 88/117 kBProgress (2): 80/357 kB | 92/117 kBProgress (2): 84/357 kB | 92/117 kBProgress (2): 88/357 kB | 92/117 kBProgress (2): 92/357 kB | 92/117 kBProgress (2): 92/357 kB | 96/117 kBProgress (2): 96/357 kB | 96/117 kBProgress (2): 96/357 kB | 100/117 kBProgress (2): 100/357 kB | 100/117 kBProgress (2): 100/357 kB | 104/117 kBProgress (2): 104/357 kB | 104/117 kBProgress (2): 106/357 kB | 104/117 kBProgress (2): 110/357 kB | 104/117 kBProgress (2): 115/357 kB | 104/117 kBProgress (2): 115/357 kB | 106/117 kBProgress (2): 119/357 kB | 106/117 kBProgress (2): 119/357 kB | 110/117 kBProgress (2): 123/357 kB | 110/117 kBProgress (2): 123/357 kB | 115/117 kBProgress (2): 123/357 kB | 117 kB    Progress (2): 127/357 kB | 117 kBProgress (2): 131/357 kB | 117 kBProgress (2): 135/357 kB | 117 kBProgress (2): 139/357 kB | 117 kBProgress (2): 143/357 kB | 117 kBProgress (2): 147/357 kB | 117 kBProgress (2): 151/357 kB | 117 kBProgress (2): 156/357 kB | 117 kB                                 Downloaded from crowdarRepo: http://nexus-v3-repositories.automation.crowdaronline.com/repository/maven-public/com/atlassian/fugue/fugue/2.7.0/fugue-2.7.0.jar (117 kB at 28 kB/s)
+Progress (1): 160/357 kBProgress (1): 164/357 kBProgress (1): 168/357 kBProgress (1): 172/357 kBProgress (1): 176/357 kB
