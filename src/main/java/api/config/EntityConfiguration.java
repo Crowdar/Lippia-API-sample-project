@@ -3,30 +3,34 @@ package api.config;
 import services.*;
 
 public enum EntityConfiguration {
-
-    USER {
-        @Override
-        public Class<?> getEntityService() {
-            return UserService.class;
-        }
-    },
     WORKSPACE {
         @Override
         public Class<?> getEntityService() {
             return WorkspaceService.class;
         }
     },
-    CLIENT {
+    HORA {
         @Override
         public Class<?> getEntityService() {
-            return ClienteService.class;
+            return ConsultarEntradasService.class;
         }
     },
-
-    PROJECT {
+    NUEVA_ENTRADA{
         @Override
         public Class<?> getEntityService() {
-            return ProyectoService.class;
+            return NuevaEntradaService.class;
+        }
+    },
+    EDITAR{
+        @Override
+        public Class<?> getEntityService() {
+            return EntradaEditadaSevice.class;
+        }
+    },
+    ELIMINAR {
+        @Override
+        public Class<?> getEntityService() {
+            return EliminarService.class;
         }
     };
 

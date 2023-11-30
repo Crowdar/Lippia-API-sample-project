@@ -17,14 +17,14 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <!--base.api.url>https://reqres.in/api/users</base.api.url-->
         <base.api.url>https://api.clockify.me/api</base.api.url>
         <cucumber.stepsDefinitions>--glue ar/steps --glue com/crowdar/api/rest</cucumber.stepsDefinitions>
         <cucumber.hooks>--glue com/crowdar/bdd/cukes --glue ar/apiExampleProject/hook</cucumber.hooks>
-        <cucumber.tags>@Clockify</cucumber.tags>
-        <crowdar.cucumber.plugins>--plugin pretty --plugin api.report.CucumberReporter:</crowdar.cucumber.plugins>
+        <cucumber.tags>@NuevaEntradaHoras</cucumber.tags>
+        <crowdar.cucumber.plugins>--plugin pretty --plugin a pi.report.CucumberReporter:</crowdar.cucumber.plugins>
         <crowdar.cucumber.option>src/test/resources/features ${cucumber.hooks} ${cucumber.stepsDefinitions} --tags 'not @Ignore' --tags ${cucumber.tags} ${crowdar.cucumber.plugins}</crowdar.cucumber.option>
         <crowdar.projectType>API</crowdar.projectType>
+        <api.key>NTZmYjBlY2QtYzQ5ZS00YTYxLWE3ZjQtZWEwYzZjMTA5MWI5</api.key>
 
     </properties>
     <profiles>

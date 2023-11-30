@@ -1,0 +1,34 @@
+{
+  "url": "{{baseUrl}}",
+  "headers": {
+    "X-Api-Key": "{{apiKey}}",
+    "Content-Type": "application/json"
+  },
+  "body": {
+    "billable": true,
+    "customAttributes": [
+      {
+        "name": "string",
+        "namespace": "string",
+        "value": "string"
+      }
+    ],
+    "customFields": [
+      {
+        "customFieldId": "string",
+        "sourceType": "WORKSPACE",
+        "value": { }
+      }
+    ],
+    "description": "nada",
+    "end": "2023-11-27T16:12:27Z",
+    "projectId": "6567b439c6247824a0ec1d5c",
+    "start": "2023-11-22T14:14:23Z",
+    "tagIds": [
+      "string"
+    ],
+    "taskId": "string"
+  },
+  "endpoint": "/workspaces/{{workspaceId}}/time-entries"
+}
+

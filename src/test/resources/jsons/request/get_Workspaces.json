@@ -1,7 +1,7 @@
 {
-  "url": "{{base.url}}",
+  "url": "{{baseUrl}}",
   "headers": {
-    "X-Api-Key": "{{api-key}}",
+    "X-Api-Key": "{{apiKey}}",
     "Content-Type": "application/json"
   },
   "endpoint": "/workspaces"

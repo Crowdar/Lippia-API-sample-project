@@ -2,12 +2,12 @@ package api.model.workspaces;
 
 import lombok.Getter;
 import lombok.Setter;
-
 import java.util.List;
 
-@Setter
 @Getter
-public class WorkspacesResponse {
+@Setter
+
+public class WorkspaceResponse {
     private String id;
     private String name;
     private HourlyRate hourlyRate;

@@ -3,34 +3,36 @@ package api.model.workspaces;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.List;
-@Setter
-@Getter
-public class WorkspaceSettings {
-    private Boolean timeRoundingInReports;
-    private Boolean onlyAdminsSeeBillableRates;
-    private Boolean onlyAdminsCreateProject;
-    private Boolean onlyAdminsSeeDashboard;
-    private Boolean defaultBillableProjects;
-    private Boolean lockTimeEntries;
-    private Round round;
-    private Boolean projectFavorites;
-    private Boolean canSeeTimeSheet;
-    private Boolean canSeeTracker;
-    private Boolean projectPickerSpecialFilter;
-    private Boolean forceProjects;
-    private Boolean forceTasks;
-    private Boolean forceTags;
-    private Boolean forceDescription;
-    private Boolean onlyAdminsSeeAllTimeEntries;
-    private Boolean onlyAdminsSeePublicProjectsEntries;
-    private Boolean trackTimeDownToSecond;
-    private String projectGroupingLabel;
-    private List<String> adminOnlyPages;
-    private String automaticLock;
-    private String onlyAdminsCreateTag;
-    private String onlyAdminsCreateTask;
-    private String timeTrackingMode;
-    private Boolean isProjectPublicByDefault;
+import java.util.ArrayList;
 
+@Getter
+@Setter
+
+public class WorkspaceSettings {
+    public boolean timeRoundingInReports;
+    public boolean onlyAdminsSeeBillableRates;
+    public boolean onlyAdminsCreateProject;
+    public boolean onlyAdminsSeeDashboard;
+    public boolean defaultBillableProjects;
+    public Object lockTimeEntries;
+    public Object lockTimeZone;
+    public boolean projectFavorites;
+    public boolean canSeeTimeSheet;
+    public boolean canSeeTracker;
+    public boolean projectPickerSpecialFilter;
+    public boolean forceProjects;
+    public boolean forceTasks;
+    public boolean forceTags;
+    public boolean forceDescription;
+    public boolean onlyAdminsSeeAllTimeEntries;
+    public boolean onlyAdminsSeePublicProjectsEntries;
+    public boolean trackTimeDownToSecond;
+    public String projectGroupingLabel;
+    public ArrayList<Object> adminOnlyPages;
+    public Object automaticLock;
+    public boolean onlyAdminsCreateTag;
+    public boolean onlyAdminsCreateTask;
+    public String timeTrackingMode;
+    public boolean multiFactorEnabled;
+    public boolean isProjectPublicByDefault;
 }
