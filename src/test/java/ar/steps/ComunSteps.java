@@ -9,7 +9,7 @@ import org.apache.commons.lang.StringUtils;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Map;
 
-public class ComunUserSteps extends PageSteps {
+public class ComunSteps extends PageSteps {
 
     @When("^I perform a '(.*)' to '(.*)' endpoint with the '(.*)' and '(.*)'$")
     public void doRequest(String methodName, String entity, String jsonName, String jsonReplacementValues) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException {

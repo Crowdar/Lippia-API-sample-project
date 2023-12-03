@@ -5,29 +5,10 @@
     "Content-Type": "application/json"
   },
   "body": {
-    "billable": true,
-    "customAttributes": [
-      {
-        "name": "string",
-        "namespace": "string",
-        "value": "string"
-      }
-    ],
-    "customFields": [
-      {
-        "customFieldId": "string",
-        "sourceType": "WORKSPACE",
-        "value": {}
-      }
-    ],
     "description": "{{decripcion}}",
     "end": "{{fin}}",
     "projectId": "{{proyectoId}}",
-    "start": "{{inicio}}",
-    "tagIds": [
-      ""
-    ],
-    "taskId": ""
+    "start": "{{inicio}}"
   },
   "endpoint": "/v1/workspaces/{{workspaceId}}/time-entries"
 }

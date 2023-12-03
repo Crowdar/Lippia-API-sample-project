@@ -32,6 +32,18 @@ public enum EntityConfiguration {
         public Class<?> getEntityService() {
             return NuevaEntradaHorariaService.class;
         }
+    },
+    EDITAR_ENTRADA {
+        @Override
+        public Class<?> getEntityService() {
+            return EditarEntradaHorariaService.class;
+        }
+    },
+    ELIMINAR_ENTRADA {
+        @Override
+        public Class<?> getEntityService() {
+            return EliminarEntradaService.class;
+        }
     };
     public abstract Class<?> getEntityService();
 }
