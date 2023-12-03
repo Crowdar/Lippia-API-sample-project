@@ -1,35 +1,24 @@
 package ar.steps;
 
-import ar.validator.EntradaHorariaValidador;
-import ar.validator.WorkspaceValidador;
-import com.crowdar.core.PageSteps;
-import com.crowdar.core.PropertyManager;
-import io.cucumber.java.en.Given;
+import ar.validaciones.ValidacionHoraria;
+import ar.validaciones.ValidacionNuevaEntrada;
 import io.cucumber.java.en.And;
-import io.cucumber.java.en.Then;
-import services.*;
+import services.BaseService;
 
-public class EntradaHorariaSteps extends PageSteps {
-    @Given("Con una cuenta creada en Clockify y X-Api-Key")
-    public void xApiKey() {
-        BaseService.X_API_KEY.set(PropertyManager.getProperty("apiKey"));
+
+public class EntradaHorariaSteps {
+    @And("Se valida las entradas horarias")
+    public void workspaceID(){
+        ValidacionHoraria.validador();
     }
-    @Then("Obtengo mis workspaces")
-    public void workspace() {
-        WorkspaceValidador.validador();
+    @And("Agrego una descripcion '(.*)', una hora de inicio '(.*)' y una hora de fin '(.*)'")
+    public void valores(String descripcion,String inicio, String fin){
+        BaseService.DESCRIPCION.set(descripcion);
+        BaseService.INICIO.set(inicio);
+        BaseService.FIN.set(fin);
     }
-    @Then("Obtengo un workspaceid valido")
-    public void workspaceId() {
-        WorkspaceService.obtengoWorkspaceId();
+    @And("Se valida la nueva entrada horaria")
+    public void validacionHoraria(){
+        ValidacionNuevaEntrada.validador();
     }
-    @And("Obtengo el usuarioid valido")
-    public void usuarioid() {
-        BaseService.ID.set("633f5b69648048064054af2b");
-    }
-    @Then("Obtengo las horas consultadas")
-    public void consultas() {
-        EntradaHorariaValidador.validador();
-    }
-    @And("Obtengo una entradaHorariaId")
-    public void entradaHorariaID() {BaseService.ENTRADA_HORARIA.set("656846d42a47c52a01332e7e");}
 }

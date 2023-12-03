@@ -1,13 +1,13 @@
 @Workspaces
-Feature: Workspace
+Feature: Como usuario de Clockify quiero interactuar con la API
 
-  @TraerWorkspaces
-  Scenario Outline: Traer todos los workspaces
-    Given Con una cuenta creada en Clockify y X-Api-Key
+  @TrerWorkspaces
+  Scenario Outline: Traer todos mis Workspaces
+    Given Con una cuenta creada en Clockify y X-Api-Key generados
     When I perform a '<operation>' to '<entity>' endpoint with the '<jsonName>' and ''
     Then status code <status> is obtained
-    Then Obtengo mis workspaces
+    And Obtengo los datos de mi Workspace
 
     Examples:
-      | operation | entity    | status | jsonName       |
-      | GET       | WORKSPACE | 200    | get_Workspaces |
+      | operation | entity    | jsonName       | status |
+      | GET       | WORKSPACE | get_Workspaces | 200    |

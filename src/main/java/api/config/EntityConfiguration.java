@@ -9,31 +9,30 @@ public enum EntityConfiguration {
             return WorkspaceService.class;
         }
     },
+    USUARIO {
+        @Override
+        public Class<?> getEntityService() {
+            return UsuarioService.class;
+        }
+    },
+    PROYECTO {
+        @Override
+        public Class<?> getEntityService() {
+            return ProyectoService.class;
+        }
+    },
     HORA {
         @Override
         public Class<?> getEntityService() {
-            return ConsultarEntradasService.class;
+            return TraerEntradaHorariaService.class;
         }
     },
-    NUEVA_ENTRADA{
+    NUEVA_ENTRADA {
         @Override
         public Class<?> getEntityService() {
-            return NuevaEntradaService.class;
-        }
-    },
-    EDITAR{
-        @Override
-        public Class<?> getEntityService() {
-            return EntradaEditadaSevice.class;
-        }
-    },
-    ELIMINAR {
-        @Override
-        public Class<?> getEntityService() {
-            return EliminarService.class;
+            return NuevaEntradaHorariaService.class;
         }
     };
-
     public abstract Class<?> getEntityService();
 }
 

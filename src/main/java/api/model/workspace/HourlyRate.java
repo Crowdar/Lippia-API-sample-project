@@ -1,8 +1,7 @@
-package api.model.workspaces;
+package api.model.workspace;
 
 import lombok.Getter;
 import lombok.Setter;
-
 @Getter
 @Setter
 

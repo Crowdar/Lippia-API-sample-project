@@ -1,9 +1,11 @@
-package api.model.workspaces;
+package api.model;
 
+import api.model.workspace.HourlyRate;
+import api.model.workspace.Membership;
+import api.model.workspace.WorkspaceSettings;
 import lombok.Getter;
 import lombok.Setter;
 import java.util.List;
-
 @Getter
 @Setter
 
@@ -15,5 +17,4 @@ public class WorkspaceResponse {
     private WorkspaceSettings workspaceSettings;
     private String imageUrl;
     private String featureSubscriptionType;
-
 }

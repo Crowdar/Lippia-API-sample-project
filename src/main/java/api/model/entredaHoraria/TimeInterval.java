@@ -1,10 +1,4 @@
-package api.model.EntredaHoraria;
-
-import lombok.Getter;
-import lombok.Setter;
-
-@Getter
-@Setter
+package api.model.entredaHoraria;
 
 public class TimeInterval {
     public String start;

@@ -1,9 +1,9 @@
-package api.model.EntredaHoraria;
+package api.model;
 
+import api.model.entredaHoraria.TimeInterval;
 import lombok.Getter;
 import lombok.Setter;
 import java.util.ArrayList;
-
 @Getter
 @Setter
 

@@ -17,18 +17,17 @@
       {
         "customFieldId": "string",
         "sourceType": "WORKSPACE",
-        "value": { }
+        "value": {}
       }
     ],
-    "description": "nada",
-    "end": "2023-11-27T16:12:27Z",
-    "projectId": "6567b439c6247824a0ec1d5c",
-    "start": "2023-11-22T14:14:23Z",
+    "description": "{{decripcion}}",
+    "end": "{{fin}}",
+    "projectId": "{{proyectoId}}",
+    "start": "{{inicio}}",
     "tagIds": [
-      "string"
+      ""
     ],
-    "taskId": "string"
+    "taskId": ""
   },
-  "endpoint": "/workspaces/{{workspaceId}}/time-entries"
+  "endpoint": "/v1/workspaces/{{workspaceId}}/time-entries"
 }
-
